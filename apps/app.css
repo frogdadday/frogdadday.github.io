@@ -1,0 +1,24 @@
+@import url("../styles.css");
+
+.detail-main { min-height: calc(100vh - 145px); }
+.detail-hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 18% 10%, rgba(48,139,255,.45), transparent 28%), radial-gradient(circle at 88% 18%, rgba(207,58,255,.35), transparent 26%), #090e25; }
+.detail-hero::after { position: absolute; inset: 0; content: ""; pointer-events: none; opacity: .42; background-image: radial-gradient(circle, white 0 1px, transparent 1.5px); background-size: 83px 79px; }
+.detail-wrap { position: relative; z-index: 1; width: min(980px, calc(100% - 2.5rem)); margin: auto; }
+.detail-intro { display: grid; grid-template-columns: 190px 1fr; gap: clamp(2rem, 6vw, 5rem); align-items: center; padding: clamp(4rem, 8vw, 7rem) 0; }
+.detail-icon { width: 190px; height: 190px; border-radius: 42px; object-fit: cover; background: #070b18; box-shadow: 0 24px 60px rgba(0,0,0,.38); }
+.detail-copy h1 { margin: .45rem 0 1rem; font-size: clamp(2.8rem, 7vw, 5.4rem); line-height: .95; letter-spacing: -.055em; }
+.detail-copy .lead { max-width: 700px; margin: 1rem 0 0; color: #d2d7e6; font-size: clamp(1.05rem, 2vw, 1.3rem); }
+.detail-content { padding: clamp(4rem, 7vw, 6.5rem) 0; }
+.detail-content h2 { margin: 0 0 1rem; font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -.035em; }
+.feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 2rem 0 4rem; padding: 0; list-style: none; }
+.feature-grid li, .trust-box { padding: 1.35rem; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
+.feature-grid strong { display: block; margin-bottom: .35rem; color: white; }
+.feature-grid span, .trust-box p { color: var(--muted); }
+.trust-box { margin-top: 2rem; border-color: rgba(101,236,149,.35); }
+.trust-box h2 { font-size: 1.4rem; }
+.detail-note { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); }
+.back-link { display: inline-block; margin-bottom: 1.2rem; color: var(--cyan); text-decoration: none; font-weight: 800; }
+.professional .detail-hero { background: radial-gradient(circle at 15% 0%, rgba(34,104,163,.35), transparent 34%), linear-gradient(135deg,#070c17,#0d1a29); }
+.professional .detail-copy .eyebrow { color: #83d9e8; }
+.professional .feature-grid li { background: #0c1725; }
+@media (max-width: 650px) { .detail-intro { grid-template-columns: 1fr; text-align: center; } .detail-icon { width: 140px; height: 140px; margin: auto; } .feature-grid { grid-template-columns: 1fr; } }

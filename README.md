@@ -15,4 +15,3 @@ Then visit `http://localhost:4173`.
 ## GitHub Pages
 
 The folder can be committed at the root of a Pages repository. No build step is required. Publishing has intentionally not been performed.
-

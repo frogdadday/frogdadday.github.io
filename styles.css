@@ -59,6 +59,8 @@ nav a:hover, nav a:focus-visible { color: white; }
 .soon { color: #79dcff; border-color: rgba(121,220,255,.45); }
 .app-card p { margin: .7rem 0 0; color: #c2c8d9; font-size: .89rem; }
 .app-card .aside { margin-top: auto; padding-top: .85rem; color: #a89bbb; font-size: .78rem; font-style: italic; }
+.card-link { margin-top: .85rem; color: var(--cyan); font-size: .78rem; font-weight: 800; text-decoration: none; }
+.card-link:hover, .card-link:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
 .release-note { margin: 1.1rem 0 0; color: #939bb1; font-size: .8rem; }
 
 .values-section { padding: clamp(4.5rem, 8vw, 7.5rem) max(1.25rem, calc((100vw - 1180px) / 2)); border-block: 1px solid #242c49; background: radial-gradient(circle at 20% 5%, rgba(141,67,218,.16), transparent 32%), #0c1123; }
