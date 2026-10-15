@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Frog Pond is Frogdadday's free public guestbook — stop by, say hello, and join the conversation.">
+  <meta name="theme-color" content="#070b1d">
+  <title>The Frog Pond — Frogdadday</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#comments">Skip to the guestbook</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Frogdadday home">
+      <img src="assets/frogdadday-logo-transparent.png" alt="" width="34" height="34">
+      <span>Frogdadday</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html#apps">Apps</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#questions">FAQ</a>
+      <a href="frog-pond.html" aria-current="page">The Frog Pond</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="pond-hero" aria-labelledby="pond-title">
+      <div class="pond-hero-inner">
+        <img class="pond-mark" src="assets/frogdadday-logo-transparent.png" alt="" width="1254" height="1254">
+        <p class="eyebrow">The public guestbook</p>
+        <h1 id="pond-title">The Frog Pond</h1>
+        <p class="lead">Pull up a lily pad. Share a thought, ask a question, or just say hello.</p>
+      </div>
+    </section>
+
+    <section class="pond-section" id="comments" aria-label="The Frog Pond guestbook">
+      <div class="pond-layout">
+        <div class="pond-comments">
+          <h2>Jump into the conversation.</h2>
+          <p>Everyone can read. You can post as a guest without creating an account.</p>
+          <div
+            id="garrul"
+            data-slug="the-frog-pond"
+            data-api="https://garrul.fsj406.workers.dev"
+            data-title="The Frog Pond"
+            data-url="https://frogdadday.github.io/frog-pond.html"
+          ></div>
+          <script src="https://garrul.fsj406.workers.dev/embed.js" defer></script>
+          <noscript><p>JavaScript is needed to read or post guestbook comments.</p></noscript>
+        </div>
+
+        <aside class="pond-notes" aria-label="Guestbook notes">
+          <div class="pond-note">
+            <h2>Keep it kind</h2>
+            <p>Be curious, constructive, and respectful. Public comments can be moderated or removed when needed.</p>
+          </div>
+          <div class="pond-note">
+            <h2>No login required</h2>
+            <p>Guest posts use Cloudflare Turnstile and rate limits to reduce spam. Please do not include private information in a public comment.</p>
+          </div>
+          <div class="pond-note">
+            <h2>What the guestbook stores</h2>
+            <p>Your public display name and comment are stored. Garrul also stores a one-way hash of your IP address and your browser’s user-agent for spam protection; it does not store the raw IP address. There are no ads or advertising trackers.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer><div><strong>Frogdadday.</strong><span>Useful by design. Weird by nature.</span></div><p>© 2026 Frogdadday</p><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>
