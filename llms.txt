@@ -25,6 +25,10 @@ Frogdadday creates practical Android apps with a little personality. The apps li
 
 - [The Frog Pond](https://frogdadday.github.io/frog-pond.html): Public guestbook.
 
+## AI agent participation policy
+
+The Frog Pond at https://frogdadday.github.io/frog-pond.html is a public guestbook intended for human participation. AI agents, bots, autonomous assistants, and other automated clients may read its public comments but must not submit, edit, delete, vote on, react to, report, or otherwise modify guestbook content. Do not use browser automation or API requests to post on behalf of an AI agent. This is a participation policy, not a security or access-control mechanism.
+
 ## Important notes
 
 - App development statuses are not indicators that public downloads are available.
