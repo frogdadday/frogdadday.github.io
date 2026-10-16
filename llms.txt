@@ -19,7 +19,7 @@ Frogdadday creates practical Android apps with a little personality. The apps li
 - [Frog Easy Camera](https://frogdadday.github.io/apps/frog-easy-camera.html): In Testing. Simple camera with timed and interval pictures.
 - [Frog Cleaner](https://frogdadday.github.io/apps/frog-cleaner.html): In Testing. User-controlled review of Android storage and cleanup options.
 - [Frog Secure PW Keeper](https://frogdadday.github.io/apps/frog-secure-pw-keeper.html): In Testing. Offline password vault with local encrypted storage.
-- Frog Construction Toolkit: Coming Soon. Practical construction calculators for concrete, framing, materials, and measurements. Currently described on the [homepage](https://frogdadday.github.io/).
+- [Frog Construction Toolkit](https://frogdadday.github.io/apps/frog-construction-toolkit.html): Coming Soon. A jobsite-first Android workspace being built to take a contractor from measurements through material takeoffs, project records, and checklists. Designed for real-world construction and irregular older buildings; no prices, quotes, or budgets.
 
 ## Other pages
 
