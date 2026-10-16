@@ -1,0 +1,5 @@
+# Frogdadday — public site crawler guidance
+User-agent: *
+Allow: /
+
+Sitemap: https://frogdadday.github.io/sitemap.xml
