@@ -1,0 +1,35 @@
+name: Verify published APK signatures
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit_published_apks.py'
+      - '.github/workflows/verify-release-apks.yml'
+  release:
+    types: [published, edited, deleted]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify the actual public release APKs and their identities
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/audit_published_apks.py
+      - name: Preserve the audit report even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: frogdadday-public-apk-audit
+          path: apk-release-audit.json
+          if-no-files-found: warn
+          retention-days: 30
