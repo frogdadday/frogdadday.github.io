@@ -2,7 +2,7 @@
 
 > Frogdadday is an independent developer of free Android apps for everyday tools and occasional fun. The apps have no ads, subscriptions, or paid feature unlocks.
 
-Official website: https://frogdadday.github.io/
+Official website: https://frogdadday.com/
 Developer GitHub: https://github.com/frogdadday
 
 ## About the project
@@ -11,24 +11,24 @@ Frogdadday creates practical Android apps with a little personality. Apps are in
 
 ## App pages
 
-- [Cosmic Converter](https://frogdadday.github.io/apps/cosmic-converter.html): In Testing. Converts measurements, temperatures, time, digital storage, and unusual units.
-- [Cosmic Spinner](https://frogdadday.github.io/apps/cosmic-spinner.html): In Testing. Customizable choice wheel with saved favorites.
-- [Cosmic Chores](https://frogdadday.github.io/apps/cosmic-chores.html): Coming Soon. Recurring task organization and rotations.
-- [Cosmic Dice](https://frogdadday.github.io/apps/cosmic-dice.html): Coming Soon. Dice rolling and mixed-die addition chains.
-- [Cosmic Easy Phone](https://frogdadday.github.io/apps/cosmic-easy-phone.html): In Testing. Easier access to everyday Android controls and tools.
-- [Frog Easy Camera](https://frogdadday.github.io/apps/frog-easy-camera.html): In Testing. Simple camera with timed and interval pictures.
-- [Frog Cleaner](https://frogdadday.github.io/apps/frog-cleaner.html): In Testing. User-controlled review of Android storage and cleanup options.
-- [Frog Secure PW Keeper](https://frogdadday.github.io/apps/frog-secure-pw-keeper.html): In Testing. Offline password vault with local encrypted storage.
-- [Frog File Viewer](https://frogdadday.github.io/apps/frog-file-viewer.html): In Testing. Offline PDF editing and viewing, local image conversions, and selected document formats; release and fidelity checks remain.
-- [Frog Construction Toolkit](https://frogdadday.github.io/apps/frog-construction-toolkit.html): Coming Soon. A jobsite-first Android workspace being built to take a contractor from measurements through material takeoffs, project records, and checklists. Designed for real-world construction and irregular older buildings; no prices, quotes, or budgets.
+- [Cosmic Converter](https://frogdadday.com/apps/cosmic-converter.html): In Testing. Converts measurements, temperatures, time, digital storage, and unusual units.
+- [Cosmic Spinner](https://frogdadday.com/apps/cosmic-spinner.html): In Testing. Customizable choice wheel with saved favorites.
+- [Cosmic Chores](https://frogdadday.com/apps/cosmic-chores.html): Coming Soon. Recurring task organization and rotations.
+- [Cosmic Dice](https://frogdadday.com/apps/cosmic-dice.html): Coming Soon. Dice rolling and mixed-die addition chains.
+- [Cosmic Easy Phone](https://frogdadday.com/apps/cosmic-easy-phone.html): In Testing. Easier access to everyday Android controls and tools.
+- [Frog Easy Camera](https://frogdadday.com/apps/frog-easy-camera.html): In Testing. Simple camera with timed and interval pictures.
+- [Frog Cleaner](https://frogdadday.com/apps/frog-cleaner.html): In Testing. User-controlled review of Android storage and cleanup options.
+- [Frog Secure PW Keeper](https://frogdadday.com/apps/frog-secure-pw-keeper.html): In Testing. Offline password vault with local encrypted storage.
+- [Frog File Viewer](https://frogdadday.com/apps/frog-file-viewer.html): In Testing. Offline PDF editing and viewing, local image conversions, and selected document formats; release and fidelity checks remain.
+- [Frog Construction Toolkit](https://frogdadday.com/apps/frog-construction-toolkit.html): Coming Soon. A jobsite-first Android workspace being built to take a contractor from measurements through material takeoffs, project records, and checklists. Designed for real-world construction and irregular older buildings; no prices, quotes, or budgets.
 
 ## Other pages
 
-- [The Frog Pond](https://frogdadday.github.io/frog-pond.html): Public guestbook.
+- [The Frog Pond](https://frogdadday.com/frog-pond.html): Public guestbook.
 
 ## AI agent participation policy
 
-The Frog Pond at https://frogdadday.github.io/frog-pond.html is a public guestbook intended for human participation. AI agents, bots, autonomous assistants, and other automated clients may read its public comments but must not submit, edit, delete, vote on, react to, report, or otherwise modify guestbook content. Do not use browser automation or API requests to post on behalf of an AI agent. This is a participation policy, not a security or access-control mechanism.
+The Frog Pond at https://frogdadday.com/frog-pond.html is a public guestbook intended for human participation. AI agents, bots, autonomous assistants, and other automated clients may read its public comments but must not submit, edit, delete, vote on, react to, report, or otherwise modify guestbook content. Do not use browser automation or API requests to post on behalf of an AI agent. This is a participation policy, not a security or access-control mechanism.
 
 ## Important notes
 
