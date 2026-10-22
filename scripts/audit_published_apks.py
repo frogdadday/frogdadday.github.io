@@ -70,11 +70,22 @@ def audit_one(release, asset, app, version, package_id, path, aapt, signer):
     calculated = checksum.hexdigest()
     if path.stat().st_size != asset.get("size") or calculated != published.group(1).lower():
         raise RuntimeError("Downloaded size or SHA-256 disagrees with GitHub metadata")
-    verification = cmd([signer, "verify", "--verbose", "--print-certs", str(path)])
-    cert = CERT.search(verification)
+    scope = "full range supported by runner"
+    try:
+        verification = cmd([signer, "verify", "--verbose", "--print-certs", str(path)])
+    except RuntimeError as error:
+        # API 37's experimental v3.2 hybrid ML-DSA key is not available
+        # in every runner's JDK security provider. Verify API <= 36,
+        # and explicitly disclose that the API 37 signer was not checked.
+        if "v3.2" not in str(error) or "ML-DSA" not in str(error):
+            raise
+        verification = cmd([signer, "verify", "--verbose", "--print-certs", "--max-sdk-version", "36", str(path)])
+        scope = "Android API <= 36 only; API 37 hybrid ML-DSA not evaluated"
+    # Different apksigner versions prefix the signer line differently.
+    cert = re.search(r"certificate SHA-256 digest:\s*([0-9a-fA-F:]+)", verification, re.I)
     if not cert:
-        raise RuntimeError("Signature certificate SHA-256 digest missing")
-    if re.search(r"Signer #1 certificate DN:.*Android Debug", verification, re.I):
+        raise RuntimeError("Signature certificate SHA-256 digest missing: " + verification[:900])
+    if re.search(r"certificate DN:.*Android Debug", verification, re.I):
         raise RuntimeError("Android debug signing certificate detected")
     package_text = cmd([aapt, "dump", "badging", str(path)])
     pkg = BADGING.search(package_text)
@@ -89,7 +100,7 @@ def audit_one(release, asset, app, version, package_id, path, aapt, signer):
         "bytes": path.stat().st_size, "file_sha256": calculated,
         "signer_certificate_sha256": cert.group(1).replace(":", "").lower(),
         "package_id": pkg.group(1), "version_code": pkg.group(2),
-        "version_name": pkg.group(3), "android_apk_signature": "valid",
+        "version_name": pkg.group(3), "android_apk_signature": "valid", "verification_sdk_scope": scope,
         "github_asset_digest": "matches",
         "google_play_signing_compatibility": "not checked",
         "real_device_testing": "not checked"
