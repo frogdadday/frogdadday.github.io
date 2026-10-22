@@ -13,12 +13,32 @@
     'frog-construction-toolkit': 'Frog-Construction-Toolkit',
     'frog-file-viewer': 'Frog-File-Viewer'
   });
+  const api = 'https://api.github.com/repos/frogdadday/frogdadday.github.io/releases?per_page=100';
+  const root = 'https://github.com/frogdadday/frogdadday.github.io/releases/download/';
+  const verifiedReleases = Object.freeze([
+    ['cosmic-converter-v1.0.4', 'Cosmic-Converter-v1.0.4.apk', 50718891],
+    ['cosmic-spinner-v1.0.2', 'Cosmic-Spinner-v1.0.2.apk', 50098886],
+    ['cosmic-chores-v0.1.0', 'Cosmic-Chores-v0.1.0.apk', 53834650],
+    ['cosmic-dice-v1.0.0', 'Cosmic-Dice-v1.0.0.apk', 52886185],
+    ['cosmic-easy-phone-v1.0.1', 'Cosmic-Easy-Phone-v1.0.1.apk', 53828116],
+    ['frog-easy-camera-v1.0.1', 'Frog-Easy-Camera-v1.0.1.apk', 48356408],
+    ['frog-cleaner-v1.0.1', 'Frog-Cleaner-v1.0.1.apk', 51583822],
+    ['frog-secure-pw-keeper-v0.1.1', 'Frog-Secure-PW-Keeper-v0.1.1.apk', 1436094],
+    ['frog-construction-toolkit-v1.0.0', 'Frog-Construction-Toolkit-v1.0.0.apk', 57229716]
+  ].map(([tag, name, size]) => ({
+    tag_name: tag,
+    draft: false,
+    prerelease: false,
+    assets: [{
+      name,
+      state: 'uploaded',
+      size,
+      browser_download_url: root + tag + '/' + name
+    }]
+  })));
   const panels = [...document.querySelectorAll('[data-apk-slug]')];
   const cards = [...document.querySelectorAll('[data-app-release]')];
   if (!panels.length && !cards.length) return;
-
-  const api = 'https://api.github.com/repos/frogdadday/frogdadday.github.io/releases?per_page=100';
-  const root = 'https://github.com/frogdadday/frogdadday.github.io/releases/download/';
   const pattern = /^([a-z0-9]+(?:-[a-z0-9]+)*)-v(\d+)\.(\d+)\.(\d+)$/i;
   function newer(a, b) {
     if (!b) return true;
@@ -64,11 +84,17 @@
   }
   async function check() {
     try {
-      const r = await fetch(api, { headers: { 'Accept': 'application/vnd.github+json' } });
-      if (!r.ok) throw new Error('Release API unavailable');
-      const data = await r.json();
-      if (!Array.isArray(data)) throw new Error('Unexpected release data');
-      const releases = findApks(data);
+      let data = [];
+      try {
+        const r = await fetch(api, { headers: { 'Accept': 'application/vnd.github+json' } });
+        if (r.ok) {
+          const remote = await r.json();
+          if (Array.isArray(remote)) data = remote;
+        }
+      } catch (_) {
+        // Keep the verified public baseline available if GitHub's list API is delayed.
+      }
+      const releases = findApks(data.concat(verifiedReleases));
       for (const panel of panels) {
         const release = releases[panel.dataset.apkSlug];
         if (!release) { noDownload(panel, false); continue; }
