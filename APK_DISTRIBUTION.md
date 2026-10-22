@@ -1,6 +1,6 @@
 # Frogdadday Android APK distribution
 
-The website has **ten prepared APK pages**, including **Frog File Viewer**. Self Destruct and Ghost Box are deliberately excluded. Source repositories and all keystores remain private. Website downloads are separate from Google Play distribution.
+The website has **ten prepared APK pages**, including **Frog File Viewer**. Nine apps currently have public APK files; Frog File Viewer has no public APK. Self Destruct and Ghost Box are deliberately excluded. Source repositories and all keystores remain private. Website downloads are separate from Google Play distribution.
 
 ## Release tag and APK filename rules
 
@@ -24,13 +24,13 @@ Use the **actual build's** semantic version in both the release tag and asset na
 - Tag: `frog-easy-camera-v1.0.1`
 - File: `Frog-Easy-Camera-v1.0.1.apk`
 
-The shared `apps/apk-downloads.js` checks up to 100 public GitHub Releases and selects the highest version it finds per app. It ignores drafts, prereleases, missing files, incorrectly named files, and zero-byte assets. The homepage badge updates dynamically. It does **not** cryptographically verify APK signatures, file security, or compatibility.
+The shared `apps/apk-downloads.js` checks up to 100 **current** public GitHub Releases and selects the highest version it finds per app. It ignores drafts, prereleases, missing or incorrectly named files, and zero-byte assets. It has **no hardcoded fallback**: if GitHub cannot confirm a release, the page does not display a download button. The homepage badge updates dynamically. If GitHub provides an asset SHA-256 digest, the app page displays that integrity checksum. Neither availability nor a matching checksum independently verifies the APK's Android signing certificate, permissions, security, or installation behavior.
 
 ## Safe release procedure
 
 1. Confirm the app is release-ready: complete relevant automated tests, real-device tests, privacy and permission checks, dependency license review, and app-specific release gates. In particular, PDF conversions, construction calculations, and the password vault require additional validation.
 2. Build a **release APK** on your development PC, using the app's permanent signing key. The usual Flutter command is `flutter build apk --release`. This assumes a working local keystore configuration; **do not assume the build is signed correctly just because it compiled**.
-3. Verify the APK with the Android SDK's `apksigner verify --verbose --print-certs build/app/outputs/flutter-apk/app-release.apk`. Confirm the expected signing certificate and final Android package ID. Keep `versionCode` increasing for updates.
+3. Verify the APK with the Android SDK's `apksigner verify --verbose --print-certs build/app/outputs/flutter-apk/app-release.apk`. Record and compare the signing-certificate SHA-256 fingerprint against the intended permanent key and prior public releases. Confirm the package ID with `apkanalyzer manifest application-id <apk>` or `aapt dump badging <apk>`, check version code, and keep `versionCode` increasing. Use `Get-FileHash -Algorithm SHA256 <apk>` on a downloaded release and compare against GitHub's public asset digest or the page's checksum (if present). That confirms file integrity relative to GitHub's digest, not developer identity.
 4. Test **that exact signed APK** on an Android device before distributing it; test permissions, functionality, install, and upgrade. For apps using Play App Signing, confirm certificate compatibility separately: an independently signed website APK may not upgrade a Play-installed copy.
 5. Copy or rename the verified APK to the matching asset filename. Never publish signing keys, `.jks` files, `key.properties`, passwords, private code, or debug builds.
 6. Open the website repository's [Releases](https://github.com/frogdadday/frogdadday.github.io/releases) and create a public release with the precise tag and asset filename. Provide notes, publish as a **normal release**, and not a draft or prerelease.
@@ -44,3 +44,10 @@ The shared `apps/apk-downloads.js` checks up to 100 public GitHub Releases and s
 - Android may ask users to enable app installation from their browser/file manager. Users should heed platform security warnings and turn the permission back off afterward if they enabled it.
 - Download availability indicates the release asset exists, **not** that GitHub or the site has performed a malware scan or certificate verification.
 - The browser contacts GitHub's public releases API to check availability. Public rate limits or temporary API failure can prevent the link from appearing even if an APK exists.
+
+## Maintaining a published release
+
+- **Withdrawn/replaced files:** delete or unpublish an incorrect GitHub Release and verify the live app page no longer lists it. The live API is the only availability source. If GitHub's API is unreachable, the site hides download buttons rather than advertising stale files. Browser caches and already downloaded files cannot be remotely recalled.
+- **Permanent keys and Play updates:** keep a secure inventory of each app's Android package ID, certificate SHA-256 fingerprint, Play App Signing relationship, version code, human release test status, and release file SHA-256. Those cannot be inferred merely from GitHub release metadata.
+- **No signed-APK claim from the website:** a GitHub Release is not an independent Android signature audit. Run release checks on the exact public APK and document any incompatibility.
+- **Optimized artwork:** WebP derivatives only affect website transfer size, not APK signing or launcher resources. Original image assets remain intact.

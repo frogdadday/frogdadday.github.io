@@ -7,20 +7,20 @@ Developer GitHub: https://github.com/frogdadday
 
 ## About the project
 
-Frogdadday creates practical Android apps with a little personality. Apps are in development or testing. Each app page automatically checks published GitHub Release APKs, showing a direct download link only when a matching public file exists. Source repositories stay private, and listing a file does not independently verify its safety or signature. Optional support never unlocks app features.
+Frogdadday creates practical Android apps with a little personality. Nine apps currently have public APK releases; Frog File Viewer is still in development. Each app page checks live public GitHub Releases for an active asset. If the GitHub API is inaccessible, availability remains unconfirmed; no potentially withdrawn APK is advertised. Source repositories stay private, and listing a file does not independently verify its safety or signature. Optional support never unlocks app features.
 
 ## App pages
 
-- [Cosmic Converter](https://frogdadday.com/apps/cosmic-converter.html): In Testing. Converts measurements, temperatures, time, digital storage, and unusual units.
-- [Cosmic Spinner](https://frogdadday.com/apps/cosmic-spinner.html): In Testing. Customizable choice wheel with saved favorites.
-- [Cosmic Chores](https://frogdadday.com/apps/cosmic-chores.html): Coming Soon. Recurring task organization and rotations.
-- [Cosmic Dice](https://frogdadday.com/apps/cosmic-dice.html): Coming Soon. Dice rolling and mixed-die addition chains.
-- [Cosmic Easy Phone](https://frogdadday.com/apps/cosmic-easy-phone.html): In Testing. Easier access to everyday Android controls and tools.
-- [Frog Easy Camera](https://frogdadday.com/apps/frog-easy-camera.html): In Testing. Simple camera with timed and interval pictures.
-- [Frog Cleaner](https://frogdadday.com/apps/frog-cleaner.html): In Testing. User-controlled review of Android storage and cleanup options.
-- [Frog Secure PW Keeper](https://frogdadday.com/apps/frog-secure-pw-keeper.html): In Testing. Offline password vault with local encrypted storage.
+- [Cosmic Converter](https://frogdadday.com/apps/cosmic-converter.html): APK publicly listed. Converts measurements, temperatures, time, digital storage, and unusual units.
+- [Cosmic Spinner](https://frogdadday.com/apps/cosmic-spinner.html): APK publicly listed. Customizable choice wheel with saved favorites.
+- [Cosmic Chores](https://frogdadday.com/apps/cosmic-chores.html): APK publicly listed. Recurring task organization and rotations.
+- [Cosmic Dice](https://frogdadday.com/apps/cosmic-dice.html): APK publicly listed. Dice rolling and mixed-die addition chains.
+- [Cosmic Easy Phone](https://frogdadday.com/apps/cosmic-easy-phone.html): APK publicly listed. Easier access to everyday Android controls and tools.
+- [Frog Easy Camera](https://frogdadday.com/apps/frog-easy-camera.html): APK publicly listed. Simple camera with timed and interval pictures.
+- [Frog Cleaner](https://frogdadday.com/apps/frog-cleaner.html): APK publicly listed. User-controlled review of Android storage and cleanup options.
+- [Frog Secure PW Keeper](https://frogdadday.com/apps/frog-secure-pw-keeper.html): APK publicly listed. Offline password vault with local encrypted storage.
 - [Frog File Viewer](https://frogdadday.com/apps/frog-file-viewer.html): In Testing. Offline PDF editing and viewing, local image conversions, and selected document formats; release and fidelity checks remain.
-- [Frog Construction Toolkit](https://frogdadday.com/apps/frog-construction-toolkit.html): Coming Soon. A jobsite-first Android workspace being built to take a contractor from measurements through material takeoffs, project records, and checklists. Designed for real-world construction and irregular older buildings; no prices, quotes, or budgets.
+- [Frog Construction Toolkit](https://frogdadday.com/apps/frog-construction-toolkit.html): APK publicly listed. A jobsite-first Android workspace being built to take a contractor from measurements through material takeoffs, project records, and checklists. Designed for real-world construction and irregular older buildings; no prices, quotes, or budgets.
 
 ## Other pages
 
