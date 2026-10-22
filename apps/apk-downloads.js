@@ -15,27 +15,6 @@
   });
   const api = 'https://api.github.com/repos/frogdadday/frogdadday.github.io/releases?per_page=100';
   const root = 'https://github.com/frogdadday/frogdadday.github.io/releases/download/';
-  const verifiedReleases = Object.freeze([
-    ['cosmic-converter-v1.0.4', 'Cosmic-Converter-v1.0.4.apk', 50718891],
-    ['cosmic-spinner-v1.0.2', 'Cosmic-Spinner-v1.0.2.apk', 50098886],
-    ['cosmic-chores-v0.1.0', 'Cosmic-Chores-v0.1.0.apk', 53834650],
-    ['cosmic-dice-v1.0.0', 'Cosmic-Dice-v1.0.0.apk', 52886185],
-    ['cosmic-easy-phone-v1.0.1', 'Cosmic-Easy-Phone-v1.0.1.apk', 53828116],
-    ['frog-easy-camera-v1.0.1', 'Frog-Easy-Camera-v1.0.1.apk', 48356408],
-    ['frog-cleaner-v1.0.1', 'Frog-Cleaner-v1.0.1.apk', 51583822],
-    ['frog-secure-pw-keeper-v0.1.1', 'Frog-Secure-PW-Keeper-v0.1.1.apk', 1436094],
-    ['frog-construction-toolkit-v1.0.0', 'Frog-Construction-Toolkit-v1.0.0.apk', 57229716]
-  ].map(([tag, name, size]) => ({
-    tag_name: tag,
-    draft: false,
-    prerelease: false,
-    assets: [{
-      name,
-      state: 'uploaded',
-      size,
-      browser_download_url: root + tag + '/' + name
-    }]
-  })));
   const panels = [...document.querySelectorAll('[data-apk-slug]')];
   const cards = [...document.querySelectorAll('[data-app-release]')];
   if (!panels.length && !cards.length) return;
@@ -66,7 +45,8 @@
         Number.isFinite(a.size) && a.size > 0 &&
         a.browser_download_url === expectedUrl);
       if (!asset || !newer(numeric, found[slug]?.numeric)) continue;
-      found[slug] = { numeric, version, url: expectedUrl, bytes: asset.size };
+      const matchDigest = /^sha256:([0-9a-f]{64})$/i.exec(asset.digest || '');
+      found[slug] = { numeric, version, url: expectedUrl, bytes: asset.size, digest: matchDigest ? matchDigest[1].toLowerCase() : null };
     }
     return found;
   }
@@ -77,6 +57,8 @@
     const version = panel.querySelector('[data-apk-version]');
     if (link) link.hidden = true;
     if (version) version.hidden = true;
+    panel.querySelector('.apk-fingerprint')?.remove();
+    panel.querySelector('.apk-availability')?.removeAttribute('data-ready');
     if (status) status.textContent = error ? 'Could not check downloads' : 'Public APK not available yet';
     if (detail) detail.textContent = error
       ? 'The public release check was unavailable. Refresh later.'
@@ -84,17 +66,12 @@
   }
   async function check() {
     try {
-      let data = [];
-      try {
-        const r = await fetch(api, { headers: { 'Accept': 'application/vnd.github+json' } });
-        if (r.ok) {
-          const remote = await r.json();
-          if (Array.isArray(remote)) data = remote;
-        }
-      } catch (_) {
-        // Keep the verified public baseline available if GitHub's list API is delayed.
-      }
-      const releases = findApks(data.concat(verifiedReleases));
+      // Require the current GitHub release listing, so withdrawn APKs disappear.
+      const response = await fetch(api, { headers: { 'Accept': 'application/vnd.github+json' }, cache: 'no-store' });
+      if (!response.ok) throw new Error('GitHub release API is unavailable');
+      const data = await response.json();
+      if (!Array.isArray(data)) throw new Error('Unexpected release API response');
+      const releases = findApks(data);
       for (const panel of panels) {
         const release = releases[panel.dataset.apkSlug];
         if (!release) { noDownload(panel, false); continue; }
@@ -111,16 +88,40 @@
           version.hidden = false;
         }
         panel.querySelector('.apk-availability')?.setAttribute('data-ready', 'true');
+        // GitHub's SHA-256 digest is for integrity checks, not proof of APK signing.
+        let fingerprint = panel.querySelector('.apk-fingerprint');
+        if (release.digest) {
+          if (!fingerprint) {
+            fingerprint = document.createElement('details');
+            fingerprint.className = 'apk-fingerprint';
+            const summary = document.createElement('summary');
+            summary.textContent = 'Show published SHA-256 checksum';
+            const code = document.createElement('code');
+            fingerprint.append(summary, code);
+            panel.querySelector('[data-apk-version]')?.insertAdjacentElement('afterend', fingerprint);
+          }
+          fingerprint.querySelector('code').textContent = release.digest;
+        } else if (fingerprint) fingerprint.remove();
         const heroStatus = panel.closest('.detail-main')?.querySelector('.detail-copy .eyebrow');
         if (heroStatus) heroStatus.textContent = 'Direct APK Available · Android';
       }
+      let availableCount = 0;
       for (const card of cards) {
-        if (!releases[card.dataset.appRelease]) continue;
         const badge = card.querySelector('.status');
-        if (badge) { badge.className = 'status available'; badge.textContent = 'APK Available'; }
+        if (releases[card.dataset.appRelease]) {
+          availableCount++;
+          if (badge) { badge.className = 'status available'; badge.textContent = 'APK Available'; }
+        } else if (badge && card.dataset.appRelease !== 'frog-file-viewer') {
+          badge.className = 'status status-check';
+          badge.textContent = 'No public APK';
+        }
       }
+      const pageSummary = document.getElementById('apk-release-summary');
+      if (pageSummary) pageSummary.textContent = availableCount + ' app' + (availableCount === 1 ? '' : 's') + ' with public APKs. Open a detail page for downloads and installation guidance. Google Play listings are separate.';
     } catch (_) {
       for (const panel of panels) noDownload(panel, true);
+      const pageSummary = document.getElementById('apk-release-summary');
+      if (pageSummary) pageSummary.textContent = 'Could not confirm APK availability right now. Check the app pages or official GitHub Releases.';
     }
   }
   check();
