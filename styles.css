@@ -144,3 +144,8 @@ footer a { text-decoration: none; }
 .hero-cta:hover, .hero-cta-secondary:hover { filter: brightness(1.08); }
 .status-check { color: #a9ddef; border-color: rgba(169,221,239,.48); }
 @media (max-width: 680px) { .hero-actions { justify-content: center; } .hero-cta, .hero-cta-secondary { width: 100%; max-width: 340px; } }
+
+/* Optional support: small rendition of Cosmic Spinner's original frog-heart painter. */
+.support-coffee-link { display: inline-flex; gap: .5rem; align-items: center; align-self: flex-start; min-height: 44px; max-width: 100%; margin-top: .8rem; color: #d1d9ed; font-size: .86rem; font-weight: 700; text-decoration: none; }
+.support-coffee-link:hover, .support-coffee-link:focus-visible { color: white; text-decoration: underline; text-underline-offset: .2em; }
+.support-frog-heart { width: 27px; height: 27px; display: block; flex: 0 0 27px; }
