@@ -10,7 +10,7 @@
   // This public site repository hosts release assets; the app source stays private.
   const endpoint = 'https://api.github.com/repos/frogdadday/frogdadday.github.io/releases?per_page=100';
   const expectedPrefix = 'https://github.com/frogdadday/frogdadday.github.io/releases/download/';
-  const versionTag = /^frog-easy-camera-v(\\d+)\\.(\\d+)\\.(\\d+)$/i;
+  const versionTag = /^frog-easy-camera-v(\d+)\.(\d+)\.(\d+)$/i;
 
   async function checkForPublicApk() {
     try {
