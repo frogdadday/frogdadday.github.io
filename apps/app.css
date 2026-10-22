@@ -46,3 +46,10 @@
 .apk-install-guide p { margin: .75rem 0 0; color: var(--muted); font-size: .87rem; }
 .apk-install-guide a { color: var(--cyan); font-weight: 700; text-underline-offset: .2em; }
 @media (max-width: 650px) { .apk-panel-header { flex-direction: column; } .apk-button { display: flex; width: 100%; } .apk-button[hidden] { display: none; } }
+
+/* Let app visitors jump directly to the public release and installation guide. */
+.detail-download-jump { display: inline-flex; margin-top: 1.35rem; padding: .8rem 1.15rem; min-height: 48px; align-items: center; justify-content: center; border-radius: 12px; background: var(--green); color: #071525; font-weight: 850; text-decoration: none; }
+.detail-download-jump:hover, .detail-download-jump:focus-visible { filter: brightness(1.07); }
+.apk-fingerprint { color: var(--muted); margin-top: .6rem; font-size: .8rem; overflow-wrap: anywhere; }
+.apk-fingerprint summary { cursor: pointer; color: #a3e6ff; }
+.apk-fingerprint code { display: block; white-space: normal; padding-top: .45rem; user-select: all; }

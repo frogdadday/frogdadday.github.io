@@ -135,3 +135,12 @@ footer a { text-decoration: none; }
   html { scroll-behavior: auto; }
   .app-card { transition: none; }
 }
+
+/* Prominent, keyboard-accessible entry points for public APK download pages. */
+.hero-actions { display: flex; flex-wrap: wrap; gap: .85rem; align-items: center; margin-top: 1.7rem; }
+.hero-cta, .hero-cta-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .8rem 1.2rem; border-radius: 12px; font-size: .95rem; font-weight: 850; line-height: 1.2; text-decoration: none; }
+.hero-cta { background: var(--green); color: #081526; box-shadow: 0 7px 25px rgba(15,30,30,.27); }
+.hero-cta-secondary { border: 1px solid #7585bc; color: #f1efff; background: rgba(7,12,30,.48); }
+.hero-cta:hover, .hero-cta-secondary:hover { filter: brightness(1.08); }
+.status-check { color: #a9ddef; border-color: rgba(169,221,239,.48); }
+@media (max-width: 680px) { .hero-actions { justify-content: center; } .hero-cta, .hero-cta-secondary { width: 100%; max-width: 340px; } }
