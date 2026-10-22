@@ -39,7 +39,7 @@ The shared `apps/apk-downloads.js` checks up to 100 public GitHub Releases and s
 
 ## Special notes
 
-- **Frog File Viewer** is the public website name for the source repository `Frog-PDF-Editor`. The installed app label currently remains **Frog PDF Editor** and the package ID stays `com.frogdadday.frog_file_toolkit`. Renaming the Android display label safely can be done separately without changing the package ID or signing identity. Its privacy policy is a draft and on-device conversion fidelity testing is outstanding. The existence of its website page is not a release sign-off.
+- **Frog File Viewer** is now also the app's Android launcher label and in-app name. Its permanent Android package ID is `com.frogdadday.frog_file_viewer`, its Flutter package is `frog_file_viewer`, and its release signing configuration expects the `frog-file-viewer-upload` alias. The private GitHub source repository is still called `Frog-PDF-Editor`. The private permanent key must be created and backed up locally before the first signed release; no keystore or password is hosted here. Its privacy policy is a draft and on-device conversion fidelity testing is outstanding. The existence of its website page is not a release sign-off.
 - No page downloads or stores APKs automatically; GitHub stores public release assets. No separate app auto-updater, telemetry, or paid service is added.
 - Android may ask users to enable app installation from their browser/file manager. Users should heed platform security warnings and turn the permission back off afterward if they enabled it.
 - Download availability indicates the release asset exists, **not** that GitHub or the site has performed a malware scan or certificate verification.
