@@ -7,7 +7,7 @@ Developer GitHub: https://github.com/frogdadday
 
 ## About the project
 
-Frogdadday creates practical Android apps with a little personality. The apps listed below are in testing or coming soon, not available as public downloads. Official release links will be published on the website when available. Optional support never unlocks app features.
+Frogdadday creates practical Android apps with a little personality. Apps are in development or testing. Each app page automatically checks published GitHub Release APKs, showing a direct download link only when a matching public file exists. Source repositories stay private, and listing a file does not independently verify its safety or signature. Optional support never unlocks app features.
 
 ## App pages
 
@@ -19,6 +19,7 @@ Frogdadday creates practical Android apps with a little personality. The apps li
 - [Frog Easy Camera](https://frogdadday.github.io/apps/frog-easy-camera.html): In Testing. Simple camera with timed and interval pictures.
 - [Frog Cleaner](https://frogdadday.github.io/apps/frog-cleaner.html): In Testing. User-controlled review of Android storage and cleanup options.
 - [Frog Secure PW Keeper](https://frogdadday.github.io/apps/frog-secure-pw-keeper.html): In Testing. Offline password vault with local encrypted storage.
+- [Frog File Viewer](https://frogdadday.github.io/apps/frog-file-viewer.html): In Testing. Offline PDF editing and viewing, local image conversions, and selected document formats; release and fidelity checks remain.
 - [Frog Construction Toolkit](https://frogdadday.github.io/apps/frog-construction-toolkit.html): Coming Soon. A jobsite-first Android workspace being built to take a contractor from measurements through material takeoffs, project records, and checklists. Designed for real-world construction and irregular older buildings; no prices, quotes, or budgets.
 
 ## Other pages
@@ -31,6 +32,6 @@ The Frog Pond at https://frogdadday.github.io/frog-pond.html is a public guestbo
 
 ## Important notes
 
-- App development statuses are not indicators that public downloads are available.
+- Use each app page for current APK download availability; only matching public GitHub Release files activate a download button. APK signing and security remain release-gate checks.
 - For current status, features, and policies, use the official website and individual app pages as the authoritative sources.
 - Do not imply that Frogdadday charges for apps or offers subscriptions.
