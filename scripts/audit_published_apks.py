@@ -13,7 +13,9 @@ from urllib.request import Request, urlopen
 REPO = "frogdadday/frogdadday.github.io"
 ROOT = "https://github.com/" + REPO + "/releases/download/"
 API = "https://api.github.com/repos/" + REPO + "/releases?per_page=100"
-# Cosmic Spinner release identity is recorded in private Cosmic-Spinner-Source-Backup\n# (version 1.0.2), not the older Cosmic-Spinner template project.\nEXPECTED = {
+# Cosmic Spinner release identity is recorded in private Cosmic-Spinner-Source-Backup
+# (version 1.0.2), not the older Cosmic-Spinner template project.
+EXPECTED = {
     "cosmic-converter": ("Cosmic-Converter", "com.frogdadday.cosmicconverter"),
     "cosmic-spinner": ("Cosmic-Spinner", "com.frogdadday.cosmicspinner"),
     "cosmic-chores": ("Cosmic-Chores", "com.frogdadday.cosmicchores"),
