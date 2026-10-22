@@ -85,6 +85,8 @@
           version.hidden = false;
         }
         panel.querySelector('.apk-availability')?.setAttribute('data-ready', 'true');
+        const heroStatus = panel.closest('.detail-main')?.querySelector('.detail-copy .eyebrow');
+        if (heroStatus) heroStatus.textContent = 'Direct APK Available · Android';
       }
       for (const card of cards) {
         if (!releases[card.dataset.appRelease]) continue;
