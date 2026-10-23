@@ -82,3 +82,25 @@
     max-width: 100%;
   }
 }
+
+
+/* Password Vault has no gallery: the minimal shield and verified security
+   explanation take the same space, without using any promotional screenshots. */
+.vault-security-showcase { margin: -1.25rem 0 2.7rem; padding: clamp(1.25rem, 3vw, 2rem); border: 1px solid rgba(136, 210, 202, .35); border-radius: 16px; background: #0c1725; }
+.vault-security-lead { display: flex; align-items: center; gap: 1.4rem; }
+.vault-security-mark { flex: 0 0 72px; color: #a6eadc; display: grid; place-items: center; }
+.vault-security-mark svg { display: block; width: 64px; height: 72px; }
+.vault-security-eyebrow { margin: 0 0 .35rem; font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #a6eadc; }
+.vault-security-showcase h2 { margin: 0 0 .6rem; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.vault-security-lead p:last-child { margin: 0; max-width: 67ch; color: #c8d5e1; line-height: 1.65; }
+.vault-security-points { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; margin-top: 1.6rem; }
+.vault-security-points > div { min-width: 0; padding-top: .9rem; border-top: 1px solid var(--line); }
+.vault-security-points strong { display: block; margin-bottom: .45rem; color: #eefbf9; }
+.vault-security-points span { display: block; color: var(--muted); font-size: .91rem; line-height: 1.65; }
+.vault-security-footnote { margin: 1.4rem 0 0; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; line-height: 1.6; }
+@media (max-width: 700px) {
+  .vault-security-lead { align-items: flex-start; gap: .9rem; }
+  .vault-security-mark { flex-basis: 42px; }
+  .vault-security-mark svg { width: 40px; height: 45px; }
+  .vault-security-points { grid-template-columns: 1fr; gap: .7rem; }
+}
