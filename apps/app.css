@@ -68,3 +68,17 @@
   .converter-gallery-grid { grid-auto-columns: minmax(220px, 78%); grid-auto-flow: column; grid-template-columns: none; gap: .85rem; overflow-x: auto; padding: .1rem .25rem .8rem; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; }
   .converter-shot { scroll-snap-align: center; }
 }
+
+
+/* Easy Camera's two preview shots use the shared lightweight app gallery. */
+.camera-gallery .converter-gallery-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 730px;
+  margin-inline: auto;
+}
+@media (max-width: 700px) {
+  .camera-gallery .converter-gallery-grid {
+    grid-template-columns: none;
+    max-width: 100%;
+  }
+}
