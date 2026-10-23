@@ -22,6 +22,21 @@ Frogdadday creates practical Android apps with a little personality. Nine apps c
 - [Frog File Viewer](https://frogdadday.com/apps/frog-file-viewer.html): In Testing. Offline PDF editing and viewing, local image conversions, and selected document formats; release and fidelity checks remain.
 - [Frog Construction Toolkit](https://frogdadday.com/apps/frog-construction-toolkit.html): APK publicly listed. A jobsite-first Android workspace being built to take a contractor from measurements through material takeoffs, project records, and checklists. Designed for real-world construction and irregular older buildings; no prices, quotes, or budgets.
 
+## Real app screenshots and privacy
+
+Eight app pages have **38 original, lightweight WebP screenshots**, with captions and descriptive image text. These images show the real Android apps, not AI-generated mockups. Each image appears in its app page between the feature descriptions and the APK availability panel; the [XML sitemap](https://frogdadday.com/sitemap.xml) associates each screenshot URL with its app page.
+
+- [Cosmic Converter](https://frogdadday.com/apps/cosmic-converter.html): 3 previews: converter controls, categories and results.
+- [Cosmic Spinner](https://frogdadday.com/apps/cosmic-spinner.html): 6 previews: spinner setup, wheel, editor and saved wheels.
+- [Cosmic Chores](https://frogdadday.com/apps/cosmic-chores.html): 6 previews: quick start, rotating schedule and chore editing.
+- [Cosmic Dice](https://frogdadday.com/apps/cosmic-dice.html): 3 previews: die rolling, mixed-die totals and a small Cosmic Mode mascot glimpse.
+- [Cosmic Easy Phone](https://frogdadday.com/apps/cosmic-easy-phone.html): 5 previews: everyday phone shortcuts, settings and practical tools.
+- [Frog Easy Camera](https://frogdadday.com/apps/frog-easy-camera.html): 2 previews: camera controls and interval photography.
+- [Frog Cleaner](https://frogdadday.com/apps/frog-cleaner.html): 6 previews: storage review, scans, file browsing, privacy and exclusions.
+- [Frog Construction Toolkit](https://frogdadday.com/apps/frog-construction-toolkit.html): 7 previews: job setup, projects, measurements and construction workflows.
+- [Frog Secure PW Keeper](https://frogdadday.com/apps/frog-secure-pw-keeper.html): **no promotional screenshots, by design**. Android secure-window protection restricts screenshots and screen recording. The page instead explains AES-256-GCM encryption, Android Keystore protection, offline local storage and best-effort 20-second clipboard clearing.
+- [Frog File Viewer](https://frogdadday.com/apps/frog-file-viewer.html): still in testing; screenshots and a public APK are not yet listed.
+
 ## Other pages
 
 - [The Frog Pond](https://frogdadday.com/frog-pond.html): Public guestbook.
@@ -29,6 +44,13 @@ Frogdadday creates practical Android apps with a little personality. Nine apps c
 ## AI agent participation policy
 
 The Frog Pond at https://frogdadday.com/frog-pond.html is a public guestbook intended for human participation. AI agents, bots, autonomous assistants, and other automated clients may read its public comments but must not submit, edit, delete, vote on, react to, report, or otherwise modify guestbook content. Do not use browser automation or API requests to post on behalf of an AI agent. This is a participation policy, not a security or access-control mechanism.
+
+## APK discovery and release status
+
+- As of October 23, 2026, **9 of 10 listed apps** have public APK releases. The remaining app, Frog File Viewer, is marked **In Testing** and does not have a public APK.
+- The site checks **current** public GitHub Releases in the visitor's browser to show APK availability, latest version and the direct download link. If GitHub cannot verify an active release, it does not show a download button. JavaScript-free crawlers may not see these dynamic badges and buttons.
+- The pages, public release listings and image gallery captions are the primary source for live status and app UI. This summary can become outdated when releases change.
+- APK availability does **not** establish security certification, APK signing validity, or successful installation on every Android device.
 
 ## Important notes
 
