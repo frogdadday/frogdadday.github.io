@@ -53,3 +53,18 @@
 .apk-fingerprint { color: var(--muted); margin-top: .6rem; font-size: .8rem; overflow-wrap: anywhere; }
 .apk-fingerprint summary { cursor: pointer; color: #a3e6ff; }
 .apk-fingerprint code { display: block; white-space: normal; padding-top: .45rem; user-select: all; }
+
+
+/* Cosmic Converter screenshots: a lightweight, swipeable image strip. */
+.converter-gallery { margin: -1.25rem 0 2.7rem; }
+.converter-gallery h2 { margin-bottom: .4rem; font-size: clamp(1.65rem, 3vw, 2.25rem); }
+.converter-gallery-intro { margin: 0 0 1.3rem; color: var(--muted); }
+.converter-gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 1rem; }
+.converter-shot { min-width: 0; margin: 0; padding: .65rem .65rem .85rem; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
+.converter-shot a { display: block; overflow: hidden; border-radius: 11px; background: #141116; }
+.converter-shot img { display: block; width: 100%; height: auto; }
+.converter-shot figcaption { margin-top: .7rem; color: #d4daf0; font-size: .86rem; font-weight: 700; text-align: center; }
+@media (max-width: 700px) {
+  .converter-gallery-grid { grid-auto-columns: minmax(220px, 78%); grid-auto-flow: column; grid-template-columns: none; gap: .85rem; overflow-x: auto; padding: .1rem .25rem .8rem; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; }
+  .converter-shot { scroll-snap-align: center; }
+}
