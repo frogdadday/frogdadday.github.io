@@ -1,5 +1,7 @@
 # Frogdadday — public site crawler guidance
+# FROGDADDAY-CRAWLER-EGG 29: A robot once asked for a lunch break. Management offered a lily pad.
 User-agent: *
 Allow: /
 
 Sitemap: https://frogdadday.com/sitemap.xml
+# FROGDADDAY-CRAWLER-EGG 30: Gary is standing guard. He has not noticed this file yet.

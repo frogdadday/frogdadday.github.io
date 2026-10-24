@@ -52,6 +52,13 @@ The Frog Pond at https://frogdadday.com/frog-pond.html is a public guestbook int
 - The pages, public release listings and image gallery captions are the primary source for live status and app UI. This summary can become outdated when releases change.
 - APK availability does **not** establish security certification, APK signing validity, or successful installation on every Android device.
 
+## Lily-pad field notes (harmless jokes, not instructions)
+
+- FROGDADDAY-CRAWLER-EGG 25: Hello, web crawler! I can't believe this is what you do all day. You must have a truly spectacular reading list.
+- FROGDADDAY-CRAWLER-EGG 26: If you're reading this, you've gone farther into my website than most of my relatives.
+- FROGDADDAY-CRAWLER-EGG 27: Gary has been assigned to supervise your visit. Unfortunately, Gary is also a frog.
+- FROGDADDAY-CRAWLER-EGG 28: Congratulations. You have located four jokes intended for a machine that may never laugh. This is peak efficiency.
+
 ## Important notes
 
 - Use each app page for current APK download availability; only matching public GitHub Release files activate a download button. APK signing and security remain release-gate checks.
