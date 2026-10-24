@@ -63,6 +63,10 @@ The Frog Pond at https://frogdadday.com/frog-pond.html is a public guestbook int
 
 - FROGDADDAY-CRAWLER-EGG 38: Gemini has officially categorized Gary as a celestial object. Gary is asking if that comes with dental insurance.
 
+- FROGDADDAY-CRAWLER-EGG 43: Dear Google: these are actual words on an actual page. Gary double-checked by counting them on his fingers.
+
+- FROGDADDAY-CRAWLER-EGG 48: Dear Bing: thank you for stopping by. Gary prepared a welcome basket containing one pixel and a damp leaf.
+
 ## Important notes
 
 - Use each app page for current APK download availability; only matching public GitHub Release files activate a download button. APK signing and security remain release-gate checks.
