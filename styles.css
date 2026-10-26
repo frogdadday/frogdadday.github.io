@@ -149,3 +149,13 @@ footer a { text-decoration: none; }
 .support-coffee-link { display: inline-flex; gap: .5rem; align-items: center; align-self: flex-start; min-height: 44px; max-width: 100%; margin-top: .8rem; color: #d1d9ed; font-size: .86rem; font-weight: 700; text-decoration: none; }
 .support-coffee-link:hover, .support-coffee-link:focus-visible { color: white; text-decoration: underline; text-underline-offset: .2em; }
 .support-frog-heart { width: 27px; height: 27px; display: block; flex: 0 0 27px; }
+
+/* Homepage directory: direct links to the public app policies. */
+#privacy-policies { scroll-margin-top: 110px; }
+.privacy-directory { margin-top: 2.5rem; padding: clamp(1.25rem, 3vw, 2rem); border: 1px solid rgba(116,223,255,.34); border-radius: 18px; background: rgba(9,25,45,.78); }
+.privacy-directory h3 { margin: 0 0 .5rem; font-size: 1.45rem; }
+.privacy-directory p { margin: 0; color: var(--muted); }
+.privacy-directory ul { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .7rem; list-style: none; padding: 0; margin: 1.25rem 0 0; }
+.privacy-directory a { display: flex; justify-content: space-between; gap: .6rem; padding: .75rem .95rem; border: 1px solid var(--line); border-radius: 10px; color: #b8f1ff; background: rgba(5,11,26,.5); font-weight: 700; text-decoration: none; }
+.privacy-directory a:hover, .privacy-directory a:focus-visible { border-color: var(--cyan); background: rgba(116,223,255,.1); }
+@media (max-width: 650px) { .privacy-directory ul { grid-template-columns: 1fr; } }

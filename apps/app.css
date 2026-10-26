@@ -104,3 +104,12 @@
   .vault-security-mark svg { width: 40px; height: 45px; }
   .vault-security-points { grid-template-columns: 1fr; gap: .7rem; }
 }
+
+/* Clear, app-specific privacy access from the hero and detail content. */
+.detail-privacy-jump { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; margin: .75rem .4rem 0 0; padding: .65rem .9rem; border: 1px solid rgba(116,223,255,.5); border-radius: 12px; color: #b8f1ff; font-weight: 800; text-decoration: none; }
+.detail-privacy-jump:hover, .detail-privacy-jump:focus-visible { background: rgba(116,223,255,.12); }
+.privacy-policy-panel { scroll-margin-top: 110px; margin: 1.6rem 0 2rem; padding: clamp(1.2rem, 3vw, 1.7rem); border: 1px solid rgba(116,223,255,.4); border-radius: 16px; background: linear-gradient(135deg, rgba(12,34,52,.95), rgba(20,20,44,.95)); }
+.privacy-policy-panel h2 { margin: 0 0 .55rem; font-size: 1.45rem; letter-spacing: -.025em; }
+.privacy-policy-panel p { margin: 0 0 1.1rem; max-width: 75ch; color: #c5d7e3; line-height: 1.65; }
+.privacy-policy-link { display: inline-flex; align-items: center; min-height: 44px; gap: .3rem; padding: .7rem 1rem; border-radius: 10px; background: #9de9f8; color: #061b2b; text-decoration: none; font-weight: 850; }
+.privacy-policy-link:hover, .privacy-policy-link:focus-visible { filter: brightness(1.08); }
