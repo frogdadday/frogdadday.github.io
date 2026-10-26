@@ -46,7 +46,7 @@
         a.browser_download_url === expectedUrl);
       if (!asset || !newer(numeric, found[slug]?.numeric)) continue;
       const matchDigest = /^sha256:([0-9a-f]{64})$/i.exec(asset.digest || '');
-      found[slug] = { numeric, version, url: expectedUrl, bytes: asset.size, digest: matchDigest ? matchDigest[1].toLowerCase() : null };
+      found[slug] = { numeric, version, url: expectedUrl, bytes: asset.size, digest: matchDigest ? matchDigest[1].toLowerCase() : null, publishedAt: release.published_at || null };
     }
     return found;
   }
@@ -58,6 +58,7 @@
     if (link) link.hidden = true;
     if (version) version.hidden = true;
     panel.querySelector('.apk-fingerprint')?.remove();
+    panel.querySelector('.apk-current-checksum')?.remove();
     panel.querySelector('.apk-availability')?.removeAttribute('data-ready');
     if (status) status.textContent = error ? 'Could not check downloads' : 'Public APK not available yet';
     if (detail) detail.textContent = error
@@ -79,29 +80,41 @@
         const detail = panel.querySelector('[data-apk-detail]');
         const link = panel.querySelector('[data-apk-link]');
         const version = panel.querySelector('[data-apk-version]');
-        if (status) status.textContent = 'Direct APK available';
+        if (status) status.textContent = 'v' + release.version + ' · APK available';
         if (detail) detail.textContent = 'Published in the official Frogdadday website releases.';
         if (link) { link.href = release.url; link.hidden = false; }
         if (version) {
-          version.textContent = 'Version ' + release.version + ' · APK · ' +
+          const publishedDate = release.publishedAt && !Number.isNaN(Date.parse(release.publishedAt))
+            ? ' · Released ' + new Date(release.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })
+            : '';
+          version.textContent = 'Version ' + release.version + publishedDate + ' · ' +
             (release.bytes / 1048576).toFixed(1) + ' MB';
           version.hidden = false;
         }
         panel.querySelector('.apk-availability')?.setAttribute('data-ready', 'true');
-        // GitHub's SHA-256 digest is for integrity checks, not proof of APK signing.
-        let fingerprint = panel.querySelector('.apk-fingerprint');
-        if (release.digest) {
-          if (!fingerprint) {
-            fingerprint = document.createElement('details');
-            fingerprint.className = 'apk-fingerprint';
-            const summary = document.createElement('summary');
-            summary.textContent = 'Show published SHA-256 checksum';
-            const code = document.createElement('code');
-            fingerprint.append(summary, code);
-            panel.querySelector('[data-apk-version]')?.insertAdjacentElement('afterend', fingerprint);
-          }
-          fingerprint.querySelector('code').textContent = release.digest;
-        } else if (fingerprint) fingerprint.remove();
+        // A published historical record must not be mistaken for the current download.
+        const record = panel.querySelector('.apk-release-record');
+        const recordMatches = record &&
+          record.dataset.releaseTag === panel.dataset.apkSlug + '-v' + release.version &&
+          release.digest && record.dataset.releaseDigest === release.digest;
+        if (record) {
+          record.classList.toggle('apk-record-older', !recordMatches);
+          const heading = record.querySelector('h3');
+          if (heading) heading.setAttribute('aria-label', recordMatches
+            ? 'Details for currently listed APK release'
+            : 'Historical APK record; compare the current release before downloading');
+        }
+        panel.querySelector('.apk-current-checksum')?.remove();
+        if (release.digest && !recordMatches) {
+          const current = document.createElement('p');
+          current.className = 'apk-current-checksum';
+          const title = document.createElement('strong');
+          title.textContent = 'SHA-256 for currently listed v' + release.version + ': ';
+          const value = document.createElement('code');
+          value.textContent = release.digest;
+          current.append(title, value);
+          panel.querySelector('[data-apk-version]')?.insertAdjacentElement('afterend', current);
+        }
         const heroStatus = panel.closest('.detail-main')?.querySelector('.detail-copy .eyebrow');
         if (heroStatus) heroStatus.textContent = 'Direct APK Available · Android';
       }
@@ -110,7 +123,7 @@
         const badge = card.querySelector('.status');
         if (releases[card.dataset.appRelease]) {
           availableCount++;
-          if (badge) { badge.className = 'status available'; badge.textContent = 'APK Available'; }
+          if (badge) { badge.className = 'status available'; badge.textContent = 'v' + releases[card.dataset.appRelease].version + ' · APK available'; }
         } else if (badge && card.dataset.appRelease !== 'frog-file-viewer') {
           badge.className = 'status status-check';
           badge.textContent = 'No public APK';
