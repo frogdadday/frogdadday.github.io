@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Frog Secure PW Keeper security design and threat model: encryption, password derivation, offline permissions, limitations, and current review status.">
+<meta property="og:title" content="Frog Secure PW Keeper — Security Design | Frogdadday">
+<meta property="og:site_name" content="Frogdadday">
+<link rel="canonical" href="https://frogdadday.com/security/frog-secure-pw-keeper.html">
+<title>Frog Secure PW Keeper — Security Design | Frogdadday</title>
+<link rel="icon" href="../assets/frogdadday-logo-transparent.png">
+<link rel="stylesheet" href="../styles.css">
+<style>
+.security-main {max-width:900px;margin:auto;padding:clamp(2rem,5vw,4.5rem) 1.25rem 5rem;color:#e2eaf5}
+.security-main h1 {font-size:clamp(2.25rem,6vw,3.8rem);line-height:1.1;letter-spacing:-.035em;margin:.7rem 0 1rem}
+.security-main h2 {font-size:1.45rem;margin:2rem 0 .8rem;color:#fff}
+.security-main p,.security-main li {line-height:1.7;color:#cbd6e4}
+.security-main li+li {margin-top:.65rem}
+.security-lede {font-size:1.15rem;max-width:67ch}
+.security-note {padding:1.1rem 1.25rem;background:#1c2436;border-left:4px solid #f4c26c;border-radius:8px}
+.security-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.security-grid section {padding:1.1rem 1.3rem;border:1px solid rgba(145,207,230,.25);border-radius:14px;background:#111c2e}
+.security-grid h2 {font-size:1.2rem;margin:0 0 .6rem}
+.security-grid ul {margin:0;padding-left:1.1rem}
+.security-main a {color:#9feafd;text-underline-offset:3px}
+.security-links {margin-top:2.3rem;padding-top:1.3rem;border-top:1px solid rgba(145,207,230,.25)}
+@media(max-width:650px){.security-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="../index.html"><img src="../assets/optimized/frogdadday-logo-transparent.webp" alt="" width="34" height="34"><span>Frogdadday</span></a><nav aria-label="Main navigation"><a href="../index.html#apps">Apps</a><a href="../index.html#questions">FAQ</a><a href="../frog-pond.html">The Frog Pond</a></nav></header>
+<main class="security-main">
+<a href="../apps/frog-secure-pw-keeper.html">← Back to Frog Secure PW Keeper</a>
+<p class="eyebrow">Public design note · Updated October 26, 2026</p>
+<h1>What the password vault protects—and what it cannot.</h1>
+<p class="security-lede">Frog Secure PW Keeper is designed as an offline Android password vault. This is a concise, developer-maintained account of its security boundaries, based on the project's security documentation. It is <strong>not</strong> an independent audit, OWASP certification or guarantee against compromise.</p>
+<div class="security-note"><strong>Most important:</strong> The app has no master-password recovery. A forgotten password, lost device key or lost encrypted backup can mean permanent loss of access. Keep an independent encrypted backup somewhere safe and remember its password.</div>
+<h2>What needs protecting?</h2>
+<p>Stored credentials, the key derived from your master password while the vault is unlocked, locally encrypted vault files, and any manually exported <code>.gpv</code> backups. The relevant risks include a stolen device, someone obtaining a backup file, an app left unlocked, accidentally exposing a copied password, and malicious or compromised software on the same device.</p>
+<div class="security-grid">
+<section><h2>Designed protections</h2><ul>
+<li>PBKDF2-HMAC-SHA256 key derivation: 600,000 iterations, 128-bit random salt, 256-bit derived key.</li>
+<li>AES-256-GCM encryption, fresh 96-bit nonce, 128-bit authentication tag and authenticated file header.</li>
+<li>An additional local encryption layer using a non-exportable Android Keystore key. StrongBox is device-dependent, not guaranteed.</li>
+<li>Zero manifest permissions—including no <code>INTERNET</code> permission—no networking code, accounts, telemetry or ads.</li>
+<li>Background locking, secure-window display protections, masked values and best-effort clipboard expiry.</li>
+<li>Manual, password-encrypted export and import through Android's file picker. Automatic Android backup is disabled.</li>
+</ul></section>
+<section><h2>Outside those protections</h2><ul>
+<li>A rooted or compromised device, malicious keyboard, accessibility service, operating system or debugger can expose data while it is in use.</li>
+<li>Portable encrypted backups are subject to offline password guessing; a weak master password is still risky.</li>
+<li>Once you explicitly export to a cloud provider, or paste into another app, that destination has its own access and privacy risks.</li>
+<li>Clipboard clearing, screenshot controls and attempts to clear memory cannot remove every copy on every Android device.</li>
+<li>Encrypted backups may contain previously deleted credentials. App deletion does not recall older exported files or guarantee physical erasure of flash blocks.</li>
+<li>A matching APK checksum or valid Android signature cannot establish that source code is free of vulnerabilities.</li>
+</ul></section>
+</div>
+<h2>Validation and open work</h2>
+<p>The developer's private-source checklist maps tests and code reviews to the <a href="https://mas.owasp.org/MASVS/" target="_blank" rel="noopener noreferrer">OWASP MASVS</a> and <a href="https://mas.owasp.org/MASTG/" target="_blank" rel="noopener noreferrer">MASTG</a>. Local encryption, tamper rejection, manifest permissions and some device lifecycle scenarios have developer-recorded tests. Broader physical-device coverage, cloud/transfer quirks, storage failure, accessibility, clipboard behavior and future KDF migration still merit testing. No third-party assessment is represented as completed or underway.</p>
+<p>The <a href="../apps/frog-secure-pw-keeper.html#download">app's download page</a> identifies the published APK version, file checksum and its observed signing-certificate fingerprint. The <a href="https://github.com/frogdadday/frogdadday.github.io/blob/main/APK_VERIFICATION.md" target="_blank" rel="noopener noreferrer">public APK verification documentation</a> explains the scope and limits of separate automated binary checks.</p>
+<div class="security-links"><p><a href="../apps/frog-secure-pw-keeper.html">Back to the app and download details →</a> · <a href="https://frogdadday.com/frog-secure-pw-keeper-privacy/">Privacy policy →</a></p></div>
+</main>
+<footer><div><strong>Frogdadday.</strong><span>Free. Simple. Respectful.</span></div><p>© 2026 Frogdadday</p></footer>
+</body></html>
