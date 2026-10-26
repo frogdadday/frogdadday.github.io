@@ -159,3 +159,10 @@ footer a { text-decoration: none; }
 .privacy-directory a { display: flex; justify-content: space-between; gap: .6rem; padding: .75rem .95rem; border: 1px solid var(--line); border-radius: 10px; color: #b8f1ff; background: rgba(5,11,26,.5); font-weight: 700; text-decoration: none; }
 .privacy-directory a:hover, .privacy-directory a:focus-visible { border-color: var(--cyan); background: rgba(116,223,255,.1); }
 @media (max-width: 650px) { .privacy-directory ul { grid-template-columns: 1fr; } }
+
+/* One public contact route across every Frogdadday page. */
+footer { grid-template-columns: minmax(0,1fr) auto auto auto; gap: 1.2rem; }
+footer .developer-email { color: #b8f1ff; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+footer .developer-email:hover, footer .developer-email:focus-visible { color: white; }
+@media (max-width: 950px) { footer { grid-template-columns: minmax(0,1fr) auto; } }
+@media (max-width: 680px) { footer { grid-template-columns: 1fr; gap: .75rem; } }
