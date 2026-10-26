@@ -142,3 +142,11 @@
   .apk-checks code { font-size: .73rem; }
   .why-this-app { margin-top: -2.5rem; }
 }
+
+/* Google Play primary option on the Cosmic Converter details page. */
+.detail-store-actions { display:flex; flex-wrap:wrap; gap:.75rem; align-items:center; margin-top:1.35rem; }
+.detail-store-actions .google-play-button, .detail-store-actions .detail-download-jump { margin-top:0; min-height:48px; padding:.8rem 1.15rem; font-size:.93rem; }
+.play-store-panel { margin:1.1rem 0 1.4rem; padding:clamp(1.25rem,3vw,1.8rem); border:1px solid rgba(166,241,192,.45); border-radius:18px; background:linear-gradient(135deg,rgba(12,40,30,.9),rgba(14,28,49,.9)); }
+.play-store-panel h2 { margin:0 0 .55rem; font-size:clamp(1.5rem,3vw,2rem); }
+.play-store-panel p { margin:0 0 1.1rem; color:#c9dcdf; line-height:1.6; }
+@media (max-width:650px) { .detail-store-actions { flex-direction:column; align-items:stretch; } .detail-store-actions a { width:100%; } .play-store-panel .google-play-button { display:flex; width:100%; } }

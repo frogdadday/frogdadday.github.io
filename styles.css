@@ -166,3 +166,11 @@ footer .developer-email { color: #b8f1ff; text-decoration: underline; text-under
 footer .developer-email:hover, footer .developer-email:focus-visible { color: white; }
 @media (max-width: 950px) { footer { grid-template-columns: minmax(0,1fr) auto; } }
 @media (max-width: 680px) { footer { grid-template-columns: 1fr; gap: .75rem; } }
+
+/* Dual distribution choices for Cosmic Converter. */
+.card-download-options { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.85rem; align-items:stretch; }
+.google-play-button, .direct-apk-button { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:.65rem .85rem; border-radius:10px; font-size:.84rem; font-weight:850; line-height:1.25; text-decoration:none; text-align:center; }
+.google-play-button { background:#a6f1c0; color:#061b13; border:1px solid #a6f1c0; }
+.direct-apk-button { background:rgba(7,27,46,.65); color:#b4ecff; border:1px solid rgba(116,223,255,.56); }
+.google-play-button:hover, .google-play-button:focus-visible, .direct-apk-button:hover, .direct-apk-button:focus-visible { filter:brightness(1.08); }
+.card-download-options .google-play-button, .card-download-options .direct-apk-button { flex:1 1 116px; }
