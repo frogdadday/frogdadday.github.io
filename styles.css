@@ -63,7 +63,7 @@ nav a { display: inline-flex; align-items: center; min-height: 44px; padding: .3
 .available { color: var(--green); border-color: rgba(101,236,149,.55); }
 .app-card p { margin: .7rem 0 0; color: #c2c8d9; font-size: .89rem; }
 .app-card .aside { margin-top: auto; padding-top: .85rem; color: #a89bbb; font-size: .78rem; font-style: italic; }
-.card-link { display: inline-flex; align-self: flex-start; align-items: center; min-height: 44px; margin-top: .7rem; color: var(--cyan); font-size: .9rem; font-weight: 800; line-height: 1.35; text-decoration: none; }
+.card-link { display: inline-flex; align-self: flex-start; align-items: center; min-height: 44px; margin-top: .9rem; color: var(--cyan); font-size: .9rem; font-weight: 800; line-height: 1.35; text-decoration: none; }
 .card-link:hover, .card-link:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
 .release-note { margin: 1.1rem 0 0; color: #939bb1; font-size: .8rem; }
 
@@ -137,8 +137,8 @@ footer a { text-decoration: none; }
 }
 
 /* Prominent, keyboard-accessible entry points for public APK download pages. */
-.hero-actions { display: flex; flex-wrap: wrap; gap: .85rem; align-items: center; margin-top: 1.7rem; }
-.hero-cta, .hero-cta-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .8rem 1.2rem; border-radius: 12px; font-size: .95rem; font-weight: 850; line-height: 1.2; text-decoration: none; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 1.85rem; }
+.hero-cta, .hero-cta-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .85rem 1.25rem; border-radius: 12px; font-size: .95rem; font-weight: 850; line-height: 1.2; text-decoration: none; }
 .hero-cta { background: var(--green); color: #081526; box-shadow: 0 7px 25px rgba(15,30,30,.27); }
 .hero-cta-secondary { border: 1px solid #7585bc; color: #f1efff; background: rgba(7,12,30,.48); }
 .hero-cta:hover, .hero-cta-secondary:hover { filter: brightness(1.08); }
@@ -156,7 +156,7 @@ footer a { text-decoration: none; }
 .privacy-directory h3 { margin: 0 0 .5rem; font-size: 1.45rem; }
 .privacy-directory p { margin: 0; color: var(--muted); }
 .privacy-directory ul { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .7rem; list-style: none; padding: 0; margin: 1.25rem 0 0; }
-.privacy-directory a { display: flex; justify-content: space-between; gap: .6rem; padding: .75rem .95rem; border: 1px solid var(--line); border-radius: 10px; color: #b8f1ff; background: rgba(5,11,26,.5); font-weight: 700; text-decoration: none; }
+.privacy-directory a { display: flex; align-items: center; padding: .75rem .95rem; border: 1px solid var(--line); border-radius: 10px; color: #b8f1ff; background: rgba(5,11,26,.5); font-weight: 700; text-decoration: none; }
 .privacy-directory a:hover, .privacy-directory a:focus-visible { border-color: var(--cyan); background: rgba(116,223,255,.1); }
 @media (max-width: 650px) { .privacy-directory ul { grid-template-columns: 1fr; } }
 
