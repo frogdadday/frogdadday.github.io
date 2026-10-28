@@ -143,6 +143,16 @@
   .why-this-app { margin-top: -2.5rem; }
 }
 
+/* PW Keeper's explanatory paragraphs precede the callout and security card.
+   Keep both in normal flow; shared gallery/callout negative margins overlap text
+   at narrow viewport widths and with larger accessibility text. */
+.password-vault-page .why-this-app {
+  margin: 1.25rem 0 1.5rem;
+}
+.password-vault-page .vault-security-showcase {
+  margin: 0 0 2.7rem;
+}
+
 /* Google Play primary option on the Cosmic Converter details page. */
 .detail-store-actions { display:flex; flex-wrap:wrap; gap:.75rem; align-items:center; margin-top:1.35rem; }
 .detail-store-actions .google-play-button, .detail-store-actions .detail-download-jump { margin-top:0; min-height:48px; padding:.8rem 1.15rem; font-size:.93rem; }
