@@ -36,12 +36,13 @@ nav a { display: inline-flex; align-items: center; min-height: 44px; padding: .3
 .hero-inner { width: min(1180px, calc(100% - 2.5rem)); margin: auto; display: grid; grid-template-columns: minmax(280px, .9fr) minmax(320px, 1.1fr); gap: clamp(1.5rem, 6vw, 5rem); align-items: center; padding: 4.5rem 0; }
 .hero-frog { width: 100%; max-height: 360px; object-fit: contain; filter: drop-shadow(0 0 24px rgba(204,64,255,.45)); }
 .eyebrow { margin: 0 0 .8rem; color: var(--cyan); font-size: .74rem; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; }
-.hero h1 { margin: 0; font-size: clamp(3.6rem, 8vw, 7rem); line-height: .9; letter-spacing: -.065em; text-shadow: 0 4px 28px rgba(0,0,0,.55); }
+.hero h1 { margin: 0; font-size: clamp(3.35rem, 7.5vw, 6.6rem); line-height: .9; letter-spacing: -.065em; text-shadow: 0 4px 28px rgba(0,0,0,.55); }
 .hero-promise { margin: 1.2rem 0 0; display: flex; flex-wrap: wrap; gap: .45rem 1.05rem; font-size: clamp(1.45rem, 3vw, 2.35rem); font-weight: 900; }
 .hero-promise span:nth-child(2) { color: var(--violet); }
 .hero-promise span:nth-child(3) { color: var(--green); }
-.hero-lede { margin: .7rem 0 0; font-size: 1.22rem; font-weight: 800; }
-.hero-note { max-width: 570px; color: #d6d9e8; }
+.hero-lede { margin: .7rem 0 0; font-size: 1.4rem; font-weight: 800; }
+.hero-sublede { margin: .2rem 0 0; font-size: 1.08rem; font-weight: 600; line-height: 1.45; color: #e9e5ff; }
+.hero-note { margin: 1.55rem 0 0; max-width: 570px; color: #d6d9e8; }
 
 .apps-section, .faq-section, .pond-section { width: min(1180px, calc(100% - 2.5rem)); margin: auto; padding: clamp(4.5rem, 8vw, 7.5rem) 0; }
 .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2rem; }
