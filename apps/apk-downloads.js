@@ -124,7 +124,7 @@
         if (releases[card.dataset.appRelease]) {
           availableCount++;
           if (badge) { badge.className = 'status available'; badge.textContent = 'v' + releases[card.dataset.appRelease].version + ' · APK available'; }
-        } else if (badge && card.dataset.appRelease !== 'frog-file-viewer') {
+        } else if (badge) {
           badge.className = 'status status-check';
           badge.textContent = 'No public APK';
         }

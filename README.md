@@ -6,8 +6,8 @@ This is the public, static GitHub Pages website of Frogdadday, an independent de
 
 ## Current state
 
-- Ten app information pages; Frog File Viewer is still in development.
-- Nine apps have published direct APK assets in the website repository's GitHub Releases.
+- Ten app information pages, including Frog File Viewer as a clearly labeled testing release.
+- Ten apps have published direct APK assets in the website repository's GitHub Releases.
 - App download sections and homepage badges check the **current GitHub public Releases API** in `apps/apk-downloads.js`. There is deliberately **no stale offline download list**: if the API fails, release availability is unknown and the button stays hidden.
 - Published GitHub SHA-256 asset digests, where available, appear on app pages as a downloadable-file integrity check. **This is not proof of valid Android signing or app security.**
 - Frog Pond comments run through the separately managed Garrul Cloudflare Worker.

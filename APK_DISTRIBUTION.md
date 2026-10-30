@@ -1,6 +1,6 @@
 # Frogdadday Android APK distribution
 
-The website has **ten prepared APK pages**, including **Frog File Viewer**. Nine apps currently have public APK files; Frog File Viewer has no public APK. Self Destruct and Ghost Box are deliberately excluded. Source repositories and all keystores remain private. Website downloads are separate from Google Play distribution.
+The website has **ten prepared APK pages**, and all ten currently have public APK files. Frog File Viewer is explicitly labeled as a testing release. Self Destruct and Ghost Box are deliberately excluded. Source repositories and all keystores remain private. Website downloads are separate from Google Play distribution.
 
 ## Release tag and APK filename rules
 
@@ -39,7 +39,7 @@ The shared `apps/apk-downloads.js` checks up to 100 **current** public GitHub Re
 
 ## Special notes
 
-- **Frog File Viewer** is now also the app's Android launcher label and in-app name. Its permanent Android package ID is `com.frogdadday.frog_file_viewer`, its Flutter package is `frog_file_viewer`, and its release signing configuration expects the `frog-file-viewer-upload` alias. The private GitHub source repository is still called `Frog-PDF-Editor`. The private permanent key must be created and backed up locally before the first signed release; no keystore or password is hosted here. Its privacy policy is a draft and on-device conversion fidelity testing is outstanding. The existence of its website page is not a release sign-off.
+- **Frog File Viewer** is also the app's Android launcher label and in-app name. Its permanent Android package ID is `com.frogdadday.frog_file_viewer`, its Flutter package is `frog_file_viewer`, and its release signing configuration uses the private `frog-file-viewer-upload` key. The private GitHub source repository is still called `Frog-PDF-Editor`; no keystore or password is hosted here. Version 0.2.0 is a signed public testing release. Its privacy policy is public, while broader on-device conversion-fidelity and real-device testing remain ongoing.
 - No page downloads or stores APKs automatically; GitHub stores public release assets. No separate app auto-updater, telemetry, or paid service is added.
 - Android may ask users to enable app installation from their browser/file manager. Users should heed platform security warnings and turn the permission back off afterward if they enabled it.
 - Download availability indicates the release asset exists, **not** that GitHub or the site has performed a malware scan or certificate verification.

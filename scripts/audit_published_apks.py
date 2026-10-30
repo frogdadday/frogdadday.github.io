@@ -25,6 +25,7 @@ EXPECTED = {
     "frog-cleaner": ("Frog-Cleaner", "com.frogdadday.frog_cleaner"),
     "frog-secure-pw-keeper": ("Frog-Secure-PW-Keeper", "app.grounded.password"),
     "frog-construction-toolkit": ("Frog-Construction-Toolkit", "com.frogconstruction.frog_construction_toolkit"),
+    "frog-file-viewer": ("Frog-File-Viewer", "com.frogdadday.frog_file_viewer"),
 }
 TAG = re.compile(r"^([a-z0-9]+(?:-[a-z0-9]+)*)-v(\d+\.\d+\.\d+)$", re.I)
 BADGING = re.compile(r"package: name='([^']+)' versionCode='([^']+)' versionName='([^']+)'")
