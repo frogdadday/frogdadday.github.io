@@ -7,7 +7,7 @@ Developer GitHub: https://github.com/frogdadday
 
 ## About the project
 
-Frogdadday creates practical Android apps with a little personality. Nine apps currently have public APK releases; Frog File Viewer is still in development. Each app page checks live public GitHub Releases for an active asset. If the GitHub API is inaccessible, availability remains unconfirmed; no potentially withdrawn APK is advertised. Source repositories stay private, and listing a file does not independently verify its safety or signature. Optional support never unlocks app features.
+Frogdadday creates practical Android apps with a little personality. Ten apps currently have public APK releases, including the Frog File Viewer v0.2.1 testing APK. Each app page checks live public GitHub Releases for an active asset. If the GitHub API is inaccessible, availability remains unconfirmed; no potentially withdrawn APK is advertised. Source repositories stay private, and listing a file does not independently verify its safety or signature. Optional support never unlocks app features.
 
 ## App pages
 
@@ -19,7 +19,7 @@ Frogdadday creates practical Android apps with a little personality. Nine apps c
 - [Frog Easy Camera](https://frogdadday.com/apps/frog-easy-camera.html): APK publicly listed. Simple camera with timed and interval pictures.
 - [Frog Cleaner](https://frogdadday.com/apps/frog-cleaner.html): APK publicly listed. User-controlled review of Android storage and cleanup options.
 - [Frog Secure PW Keeper](https://frogdadday.com/apps/frog-secure-pw-keeper.html): APK publicly listed. Offline password vault with local encrypted storage.
-- [Frog File Viewer](https://frogdadday.com/apps/frog-file-viewer.html): In Testing. Offline PDF editing and viewing, local image conversions, and selected document formats; release and fidelity checks remain.
+- [Frog File Viewer](https://frogdadday.com/apps/frog-file-viewer.html): Public testing APK v0.2.1 available. Offline PDF viewing and editing, JPG/PNG/WebP image insertion and positioning within existing PDFs, image conversions, and selected document formats; broader fidelity testing remains ongoing.
 - [Frog Construction Toolkit](https://frogdadday.com/apps/frog-construction-toolkit.html): APK publicly listed. A jobsite-first Android workspace being built to take a contractor from measurements through material takeoffs, project records, and checklists. Designed for real-world construction and irregular older buildings; no prices, quotes, or budgets.
 
 ## Real app screenshots and privacy
@@ -35,7 +35,7 @@ Eight app pages have **38 original, lightweight WebP screenshots**, with caption
 - [Frog Cleaner](https://frogdadday.com/apps/frog-cleaner.html): 6 previews: storage review, scans, file browsing, privacy and exclusions.
 - [Frog Construction Toolkit](https://frogdadday.com/apps/frog-construction-toolkit.html): 7 previews: job setup, projects, measurements and construction workflows.
 - [Frog Secure PW Keeper](https://frogdadday.com/apps/frog-secure-pw-keeper.html): **no promotional screenshots, by design**. Android secure-window protection restricts screenshots and screen recording. The page instead explains AES-256-GCM encryption, Android Keystore protection, offline local storage and best-effort 20-second clipboard clearing.
-- [Frog File Viewer](https://frogdadday.com/apps/frog-file-viewer.html): still in testing; screenshots and a public APK are not yet listed.
+- [Frog File Viewer](https://frogdadday.com/apps/frog-file-viewer.html): a public v0.2.1 testing APK is available; promotional screenshots are not currently listed.
 
 ## Other pages
 
@@ -47,7 +47,7 @@ The Frog Pond at https://frogdadday.com/frog-pond.html is a public guestbook int
 
 ## APK discovery and release status
 
-- As of October 23, 2026, **9 of 10 listed apps** have public APK releases. The remaining app, Frog File Viewer, is marked **In Testing** and does not have a public APK.
+- As of October 30, 2026, **all 10 listed apps** have public APK releases. Frog File Viewer v0.2.1 is explicitly marked as a **testing release**, not a production-certified app.
 - The site checks **current** public GitHub Releases in the visitor's browser to show APK availability, latest version and the direct download link. If GitHub cannot verify an active release, it does not show a download button. JavaScript-free crawlers may not see these dynamic badges and buttons.
 - The pages, public release listings and image gallery captions are the primary source for live status and app UI. This summary can become outdated when releases change.
 - APK availability does **not** establish security certification, APK signing validity, or successful installation on every Android device.
