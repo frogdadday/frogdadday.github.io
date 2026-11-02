@@ -23,5 +23,7 @@
     "real_device_testing_checked": false,
     "reproducible_source_build_checked": false
   },
-  "source_binary_relationship": "Version, package identity, and source commit chronology match. No reproducible-build attestation or cryptographic proof binds this exact APK to this exact source commit."
+  "source_binary_relationship": "Version, package identity, and source commit chronology match. No reproducible-build attestation or cryptographic proof binds this exact APK to this exact source commit.",
+  "source_snapshot_url": "https://github.com/frogdadday/frogdadday.github.io/tree/main/source/cosmic-converter/tsp-ed-1.0.6-build-9",
+  "source_snapshot_repository": "frogdadday/frogdadday.github.io"
 }
