@@ -1,0 +1,27 @@
+{
+  "app": "Cosmic Converter",
+  "edition": "TSP ed.",
+  "version_name": "1.0.6",
+  "android_version_code": 9,
+  "package_id": "com.frogdadday.cosmicconverter",
+  "source_project_version": "1.0.6+9",
+  "source_commit": "633a25451ca02d8083dd56cadf321cb025301246",
+  "apk_release_tag": "cosmic-converter-v1.0.6",
+  "apk_filename": "Cosmic-Converter-v1.0.6.apk",
+  "apk_url": "https://github.com/frogdadday/frogdadday.github.io/releases/download/cosmic-converter-v1.0.6/Cosmic-Converter-v1.0.6.apk",
+  "apk_bytes": 50718891,
+  "apk_sha256": "f91a16e83ea806ac5862202da885c69cb202c5cc8d8f5a328abc2d9114bf3b24",
+  "apk_signer_certificate_sha256": "75629ea4bf37607a7e05b97d4ccf631e58476ebc567481b5981acf84e363f59a",
+  "public_apk_audit_run": "https://github.com/frogdadday/frogdadday.github.io/actions/runs/40860335989",
+  "audit_checks": {
+    "apk_signature_valid": true,
+    "github_asset_digest_matches": true,
+    "expected_package_id_matches": true,
+    "version_name_matches": true,
+    "version_code_matches": true,
+    "play_app_signing_compatibility_checked": false,
+    "real_device_testing_checked": false,
+    "reproducible_source_build_checked": false
+  },
+  "source_binary_relationship": "Version, package identity, and source commit chronology match. No reproducible-build attestation or cryptographic proof binds this exact APK to this exact source commit."
+}
