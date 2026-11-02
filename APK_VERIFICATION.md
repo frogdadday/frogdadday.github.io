@@ -25,3 +25,8 @@ The inspectable TSP ed. source snapshot for Cosmic Converter 1.0.6+9 is publishe
 The website also exposes the SHA-256 **file** digest from the current GitHub API when provided. That checksum can help visitors compare their download against GitHub's reported bytes; it is **not an Android signing certificate**.
 
 When a release is removed or GitHub's release API is unavailable, the site does not advertise a static/stale download link.
+
+
+## Frog File Viewer TSP edition source snapshot
+
+The inspectable Frog File Viewer source snapshot for version 0.2.1+3 is published at `source/frog-file-viewer/tsp-ed-0.2.1-build-3/`. Its package ID, version name, and Android version code match the audited public testing APK. The snapshot records the source commit, APK SHA-256, and signer-certificate fingerprint. This is a version-and-identity match, not a reproducible-build attestation. The APK audit does not establish Google Play App Signing compatibility or real-device testing of that exact artifact. The app remains explicitly labeled a testing release; document conversion fidelity and broader device validation are still ongoing.
