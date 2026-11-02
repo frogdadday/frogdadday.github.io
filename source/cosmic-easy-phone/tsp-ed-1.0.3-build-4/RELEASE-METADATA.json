@@ -1,0 +1,39 @@
+{
+  "app": "Cosmic Easy Phone",
+  "edition": "TSP ed.",
+  "source_snapshot_path": "source/cosmic-easy-phone/tsp-ed-1.0.3-build-4/",
+  "source_repository": "frogdadday/cosmic-easy-phone",
+  "source_repository_visibility": "private",
+  "source_branch": "main",
+  "source_commit": "adf6ffc1e81fcdb8f75b5de02aa9364aa232baf1",
+  "source_commit_date_utc": "2026-10-29T23:48:45Z",
+  "pubspec_version": "1.0.3+4",
+  "version_name": "1.0.3",
+  "android_version_code": 4,
+  "package_id": "com.frogdadday.android_toolkit",
+  "apk_release_tag": "cosmic-easy-phone-v1.0.3",
+  "apk_filename": "Cosmic-Easy-Phone-v1.0.3.apk",
+  "apk_url": "https://github.com/frogdadday/frogdadday.github.io/releases/download/cosmic-easy-phone-v1.0.3/Cosmic-Easy-Phone-v1.0.3.apk",
+  "apk_asset_uploaded_at_utc": "2026-10-29T23:54:37Z",
+  "apk_release_published_at_utc": "2026-10-29T23:56:21Z",
+  "apk_size_bytes": 53536958,
+  "apk_sha256": "3cc39d296ad3725c1bd14f7c3203fafbfd22ce4a703118b0a953f7abd5cca4e8",
+  "signer_certificate_sha256": "fa78e32cf14fb91f7fc3245d0a14f461f8f17d8ef7f687795b024a70f806a5cf",
+  "audit_workflow_run": "https://github.com/frogdadday/frogdadday.github.io/actions/runs/40976447001",
+  "audit": {
+    "android_apk_signature": "valid",
+    "verification_sdk_scope": "full range supported by runner",
+    "github_asset_digest": "matches",
+    "package_id_matches_source": true,
+    "version_name_matches_source": true,
+    "version_code_matches_source": true,
+    "google_play_signing_compatibility": "not checked",
+    "real_device_testing": "not checked",
+    "reproducible_source_build": false
+  },
+  "notes": [
+    "APK signature, digest, package ID, version name, and version code are recorded by the public APK audit workflow.",
+    "The source commit predates the APK asset upload by several minutes but no cryptographic source-to-binary attestation was performed.",
+    "Private signing materials and APK/AAB binaries are not part of this source snapshot."
+  ]
+}

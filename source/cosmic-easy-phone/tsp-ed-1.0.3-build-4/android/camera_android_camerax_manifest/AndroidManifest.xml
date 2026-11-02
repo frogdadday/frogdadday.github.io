@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  App-specific CameraX manifest: Cosmic Easy Phone captures still pictures with
+  audio disabled. The upstream plugin declares legacy storage and microphone
+  permissions for broader use cases; this app supplies only what it uses.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Required for the plugin's optional video path; the app removes it
+         from its final manifest because Easy Camera always disables audio. -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+</manifest>

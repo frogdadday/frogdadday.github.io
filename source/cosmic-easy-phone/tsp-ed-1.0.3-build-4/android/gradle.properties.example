@@ -1,0 +1,4 @@
+org.gradle.jvmargs=-Xmx4G -XX:MaxMetaspaceSize=1G -XX:ReservedCodeCacheSize=512m
+android.useAndroidX=true
+# Set Gradle's JDK to Java 21 in Android Studio.
+# If needed, add org.gradle.java.home using your own local JDK 21 path.

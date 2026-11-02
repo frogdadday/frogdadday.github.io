@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <!-- Flutter regenerates this Windows-only, gitignored file on every build. -->
+    <issue id="PropertyEscape">
+        <ignore regexp=".*local\.properties" />
+    </issue>
+    <!-- Adding Core KTX only for these style suggestions would infer a legacy
+         gallery-read permission. The framework APIs are clearer and safer here. -->
+    <issue id="UseKtx" severity="ignore" />
+</lint>
