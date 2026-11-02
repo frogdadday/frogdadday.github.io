@@ -6,6 +6,18 @@
 
 This is the source snapshot published for independent inspection of the TSP edition. It includes the Flutter/Dart application code, Android project files, tests, dependency lockfile, and the privacy policy supplied with the app. It deliberately excludes private signing materials, release checklists, development notes, AAB/APK binaries, and unrelated platform templates.
 
+> **Source Code Notice — Inspection & Transparency**
+>
+> This source is published publicly so anyone can inspect, review, and audit how the software works.
+>
+> **Privacy & transparency:** Review the production Android manifest, permissions, application code, and resolved dependencies. Check for analytics, advertising, tracking, and network functionality. Development and profiling variants may contain permissions that are not present in the production release; the manifest notes in this README explain the distinction.
+>
+> **Copyright & usage rights:** All rights reserved. Public access does not grant permission to commercially exploit, rebrand, redistribute, or publish compiled versions of this software. The only reuse permissions are the limited personal inspection, private non-commercial study, and GitHub-native review-fork permissions expressly stated in the accompanying license. A review fork is not permission to publish an app or distribute a modified binary.
+>
+> The purpose of publication is transparency and independent inspection—not transfer of ownership or permission to reuse the work.
+>
+> *You shouldn't have to take my word for it. You can look.*
+
 ## Match to the public APK
 
 The matching direct-download APK is:
@@ -42,7 +54,7 @@ See [BUILD.md](BUILD.md). The permanent Android signing key and `android/key.pro
 
 ## License and artwork
 
-The source code is provided under the custom [Source-Available Audit & Fork License](LICENSE.md). This is **source-available**, not OSI-certified open-source software. The license permits inspection and GitHub-hosted forks for non-commercial audit, study, and experimentation, while restricting redistribution, repackaging, commercial exploitation, and publication of derivative app builds.
+The source code is provided under the custom [Source-Available Audit & Fork License](LICENSE.md). This is **source-available**, not OSI-certified open-source software. The license permits personal inspection, private non-commercial study, and GitHub-native review forks only; it prohibits redistribution outside that narrow fork permission, commercial exploitation, rebranding, and publication of derivative app builds.
 
 Frogdadday names, logos, frog mascot artwork, app icons, screenshots, and other branding/artwork remain reserved unless separately licensed. Third-party dependencies remain under their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and `pubspec.lock`.
 

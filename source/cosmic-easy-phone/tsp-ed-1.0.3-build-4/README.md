@@ -8,6 +8,18 @@ This is the source snapshot for independent inspection of the Cosmic Easy Phone 
 
 It deliberately excludes APK/AAB release binaries, private signing keys, `android/key.properties`, local SDK/IDE paths, and internal project-planning notes. The published privacy policy remains available separately at [frogdadday.com](https://frogdadday.com/cosmic-easy-phone-privacy/).
 
+> **Source Code Notice — Inspection & Transparency**
+>
+> This source is published publicly so anyone can inspect, review, and audit how the software works.
+>
+> **Privacy & transparency:** Review the production Android manifest, permissions, application code, and resolved dependencies. Check for analytics, advertising, tracking, and network functionality. Development and profiling variants may contain permissions that are not present in the production release; the manifest notes in this README explain the distinction.
+>
+> **Copyright & usage rights:** All rights reserved. Public access does not grant permission to commercially exploit, rebrand, redistribute, or publish compiled versions of this software. The only reuse permissions are the limited personal inspection, private non-commercial study, and GitHub-native review-fork permissions expressly stated in the accompanying license. A review fork is not permission to publish an app or distribute a modified binary.
+>
+> The purpose of publication is transparency and independent inspection—not transfer of ownership or permission to reuse the work.
+>
+> *You shouldn't have to take my word for it. You can look.*
+
 ## Matching public APK
 
 - [Cosmic Easy Phone v1.0.3 APK](https://github.com/frogdadday/frogdadday.github.io/releases/download/cosmic-easy-phone-v1.0.3/Cosmic-Easy-Phone-v1.0.3.apk)
@@ -46,7 +58,7 @@ See [SOURCE_SETUP.md](SOURCE_SETUP.md) and [BUILD.md](BUILD.md). The automated w
 
 ## License and artwork
 
-Original source code is provided under the custom [Source-Available Audit & Fork License](LICENSE.md). This is **source-available**, not OSI-approved open-source software. The license permits personal inspection, non-commercial study, and GitHub-native public forks for review purposes while restricting redistribution, commercial exploitation, rebranding, and publication of derivative app builds.
+Original source code is provided under the custom [Source-Available Audit & Fork License](LICENSE.md). This is **source-available**, not OSI-approved open-source software. The license permits personal inspection, private non-commercial study, and GitHub-native review forks only; it prohibits redistribution outside that narrow fork permission, commercial exploitation, rebranding, and publication of derivative app builds.
 
 Frogdadday names, product names, logos, frog mascot artwork, app icons, screenshots, and other branding/artwork are excluded unless separately licensed. Third-party dependencies and tools remain under their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 

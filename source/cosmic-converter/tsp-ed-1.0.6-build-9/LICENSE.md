@@ -4,6 +4,8 @@ Copyright © 2026 Frogdadday. All rights reserved.
 
 This license applies only to the original Cosmic Converter source code and other original materials expressly identified as covered by this license in this source snapshot. It does not replace the license of any third-party component. Frogdadday names, logos, product names, frog mascot artwork, app icons, screenshots, and other branding/artwork are excluded unless a separate written license says otherwise.
 
+**Public source notice:** This code is published for transparency and independent inspection. The accompanying license grants only the narrow rights stated below. In particular, a GitHub-native fork is permitted solely as a review/inspection copy; it does not authorize redistribution elsewhere, publishing a compiled app, rebranding, or commercial use.
+
 ## 1. Limited permission
 
 Subject to the conditions below, the copyright holder grants each individual a limited, worldwide, non-exclusive, royalty-free, non-transferable, revocable license to:
@@ -11,9 +13,9 @@ Subject to the conditions below, the copyright holder grants each individual a l
 1. view and download this source snapshot for personal inspection;
 2. read, analyze, test, and audit the source, including for privacy and security review;
 3. make and run modifications privately for personal, non-commercial study and experimentation; and
-4. create and maintain a public GitHub fork of the repository through GitHub's native fork functionality, solely for the inspection, audit, study, and experimentation purposes described above.
+4. create and maintain a public GitHub fork of the repository through GitHub's native fork functionality, solely as a review copy for inspection, audit, and non-commercial study. The fork must remain on GitHub, retain this license and all notices, and must not be used to distribute modified source outside GitHub or publish a compiled app.
 
-A GitHub-hosted fork may display the original source and the fork author's review-oriented modifications as necessary for those permitted purposes. The fork must retain this license and all applicable copyright and third-party notices.
+A GitHub-hosted fork may display the original source and review-oriented modifications solely so others can inspect the work. This narrow exception does not grant permission to redistribute the source elsewhere, publish an APK/AAB or other compiled build, create a competing app, rebrand the project, or commercially exploit the source. The fork must retain this license and all applicable copyright and third-party notices.
 
 ## 2. Restrictions
 
@@ -27,7 +29,7 @@ Unless the copyright holder gives separate, prior written permission, you may no
 6. remove or alter copyright, attribution, license, or provenance notices; or
 7. grant another person rights in the covered materials beyond the limited permissions in this license.
 
-A GitHub fork is not permission to publish a competing app, distribute a modified binary, or use the source commercially. GitHub's platform terms apply independently to GitHub-hosted content and forks.
+A GitHub fork is permitted only as an inspection/review copy. It is not permission to redistribute source outside GitHub-native forking, publish a competing app, distribute a modified binary, rebrand the work, or use the source commercially. GitHub's platform terms apply independently to GitHub-hosted content and forks.
 
 ## 3. Contributions
 
