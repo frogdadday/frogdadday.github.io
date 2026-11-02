@@ -1,6 +1,6 @@
 # Frogdadday Android APK distribution
 
-The website has **ten prepared APK pages**, and all ten currently have public APK files. Frog File Viewer is explicitly labeled as a testing release. Self Destruct and Ghost Box are deliberately excluded. Source repositories and all keystores remain private. Website downloads are separate from Google Play distribution.
+The website has ten prepared APK pages backed by public GitHub Releases. Frog File Viewer is explicitly labeled as a testing release. Self Destruct and Ghost Box are deliberately excluded. App development repositories and all signing materials remain private. Cosmic Converter's reviewed TSP ed. 1.0.6 source snapshot is publicly available in `source/cosmic-converter/tsp-ed-1.0.6-build-9/` within this repository. Website downloads are separate from Google Play distribution.
 
 ## Release tag and APK filename rules
 
