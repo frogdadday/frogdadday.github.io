@@ -6,7 +6,7 @@ The website publishes Android APKs through GitHub Releases. Being published thro
 
 GitHub Actions workflow: https://github.com/frogdadday/frogdadday.github.io/actions/workflows/verify-release-apks.yml
 
-The read-only audit script (`scripts/audit_published_apks.py`) downloads **each actual public APK**, checks its file size and SHA-256 against the GitHub release digest, validates its APK signature with Android SDK `apksigner`, rejects Android Debug signing, and extracts the Android package ID and version using `aapt dump badging`. The package ID is compared with the app's currently recorded private-source configuration, and the APK version name with its release tag.
+The read-only audit script (`scripts/audit_published_apks.py`) downloads **each actual public APK**, checks its file size and SHA-256 against the GitHub release digest, validates its APK signature with Android SDK `apksigner`, rejects Android Debug signing, and extracts the Android package ID and version using `aapt dump badging`. The package ID is compared with the expected package mapping in the audit script, and the APK version name with its release tag. This check does not prove that an APK was built from a particular source commit.
 
 Results appear as a downloadable workflow artifact named `frogdadday-public-apk-audit` containing `apk-release-audit.json`. The audit exits with failure if a release is missing or invalid. It does **not** need any private signing keystore.
 
