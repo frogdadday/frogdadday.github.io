@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Flutter Android embedding and engine",
+    "version": "3.47.2 (engine a804b26164)",
+    "artifacts": ["io.flutter:flutter_embedding_release", "io.flutter:armeabi_v7a_release", "io.flutter:arm64_v8a_release", "io.flutter:x86_64_release"],
+    "license": "BSD-3-Clause",
+    "source": "https://github.com/flutter/flutter"
+  },
+  {
+    "name": "AndroidX support libraries",
+    "version": "resolved by Gradle; see the release dependency report",
+    "artifacts": ["androidx.activity", "androidx.annotation", "androidx.arch.core", "androidx.collection", "androidx.core", "androidx.datastore", "androidx.documentfile", "androidx.fragment", "androidx.interpolator", "androidx.lifecycle", "androidx.loader", "androidx.localbroadcastmanager", "androidx.media", "androidx.startup", "androidx.tracing", "androidx.versionedparcelable", "androidx.window"],
+    "license": "Apache-2.0",
+    "source": "https://github.com/androidx/androidx"
+  },
+  {
+    "name": "AndroidX Media3 / ExoPlayer",
+    "version": "1.9.2",
+    "artifacts": ["androidx.media3:media3-common", "androidx.media3:media3-container", "androidx.media3:media3-database", "androidx.media3:media3-datasource", "androidx.media3:media3-decoder", "androidx.media3:media3-exoplayer", "androidx.media3:media3-exoplayer-dash", "androidx.media3:media3-exoplayer-hls", "androidx.media3:media3-exoplayer-rtsp", "androidx.media3:media3-exoplayer-smoothstreaming", "androidx.media3:media3-extractor", "androidx.media3:media3-session"],
+    "license": "Apache-2.0",
+    "source": "https://github.com/androidx/media"
+  },
+  {
+    "name": "AndroidX CameraX",
+    "version": "1.6.2",
+    "artifacts": ["androidx.camera:camera-core", "androidx.camera:camera-camera2", "androidx.camera:camera-camera2-pipe", "androidx.camera:camera-lifecycle", "androidx.camera:camera-video", "androidx.camera.featurecombinationquery:featurecombinationquery"],
+    "license": "Apache-2.0",
+    "source": "https://github.com/androidx/androidx"
+  },
+  {
+    "name": "Kotlin standard library",
+    "version": "2.4.0",
+    "artifacts": ["org.jetbrains.kotlin:kotlin-stdlib"],
+    "license": "Apache-2.0",
+    "source": "https://github.com/JetBrains/kotlin"
+  },
+  {
+    "name": "Kotlin coroutines",
+    "version": "1.9.0",
+    "artifacts": ["org.jetbrains.kotlinx:kotlinx-coroutines-android", "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm"],
+    "license": "Apache-2.0",
+    "source": "https://github.com/Kotlin/kotlinx.coroutines"
+  },
+  {
+    "name": "Okio",
+    "version": "3.9.1",
+    "artifacts": ["com.squareup.okio:okio", "com.squareup.okio:okio-jvm"],
+    "license": "Apache-2.0",
+    "source": "https://github.com/square/okio"
+  },
+  {
+    "name": "JSpecify annotations",
+    "version": "1.0.0",
+    "artifacts": ["org.jspecify:jspecify"],
+    "license": "Apache-2.0",
+    "source": "https://github.com/jspecify/jspecify"
+  },
+  {
+    "name": "JetBrains annotations",
+    "version": "23.0.0",
+    "artifacts": ["org.jetbrains:annotations"],
+    "license": "Apache-2.0",
+    "source": "https://github.com/JetBrains/java-annotations"
+  },
+  {
+    "name": "Guava listenablefuture compatibility artifact",
+    "version": "1.0",
+    "artifacts": ["com.google.guava:listenablefuture"],
+    "license": "Apache-2.0",
+    "source": "https://github.com/google/guava"
+  }
+]

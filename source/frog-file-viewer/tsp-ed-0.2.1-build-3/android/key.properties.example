@@ -1,0 +1,8 @@
+# FROG FILE VIEWER ONLY. Copy to android/key.properties locally.
+# Create the matching permanent key before your first signed build.
+# Never commit key.properties, your keystore, or the passwords.
+storePassword=replace-me
+keyPassword=replace-me
+keyAlias=frog-file-viewer-upload
+# Relative to android/app (or replace with an absolute local path).
+storeFile=../frog-file-viewer-upload-key.jks

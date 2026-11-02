@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PDF recovery drafts and preview data must remain under user/device control.
+     Android 12+ needs separate rules for cloud backup and device transfer;
+     allowBackup=false alone does not block D2D on every OEM device. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="root" path="." />
+        <exclude domain="file" path="." />
+        <exclude domain="database" path="." />
+        <exclude domain="sharedpref" path="." />
+        <exclude domain="device_root" path="." />
+        <exclude domain="device_file" path="." />
+        <exclude domain="device_database" path="." />
+        <exclude domain="device_sharedpref" path="." />
+        <exclude domain="external" path="." />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="root" path="." />
+        <exclude domain="file" path="." />
+        <exclude domain="database" path="." />
+        <exclude domain="sharedpref" path="." />
+        <exclude domain="device_root" path="." />
+        <exclude domain="device_file" path="." />
+        <exclude domain="device_database" path="." />
+        <exclude domain="device_sharedpref" path="." />
+        <exclude domain="external" path="." />
+    </device-transfer>
+</data-extraction-rules>

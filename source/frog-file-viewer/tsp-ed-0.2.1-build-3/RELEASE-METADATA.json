@@ -1,0 +1,39 @@
+{
+  "app": "Frog File Viewer",
+  "edition": "TSP ed.",
+  "source_snapshot_path": "source/frog-file-viewer/tsp-ed-0.2.1-build-3/",
+  "source_repository": "frogdadday/Frog-PDF-Editor",
+  "source_repository_visibility": "private",
+  "source_branch": "main",
+  "source_commit": "e3fb51e1e70cb982798023f674fa32a6ab302665",
+  "source_commit_date_utc": "2026-10-30T20:28:37Z",
+  "pubspec_version": "0.2.1+3",
+  "version_name": "0.2.1",
+  "android_version_code": 3,
+  "package_id": "com.frogdadday.frog_file_viewer",
+  "apk_release_tag": "frog-file-viewer-v0.2.1",
+  "apk_filename": "Frog-File-Viewer-v0.2.1.apk",
+  "apk_url": "https://github.com/frogdadday/frogdadday.github.io/releases/download/frog-file-viewer-v0.2.1/Frog-File-Viewer-v0.2.1.apk",
+  "apk_published_at_utc": "2026-10-31T02:07:11Z",
+  "apk_size_bytes": 99718707,
+  "apk_sha256": "b8bbd4f9d53e2f094b55dd5338090525c37f7b09d1f5ed3956ca99e819de4efa",
+  "signer_certificate_sha256": "cb109380f39383b5f86ec335936c1e5d782dc3292a6b7a8328d658118dc063e7",
+  "audit_workflow_run": "https://github.com/frogdadday/frogdadday.github.io/actions/runs/41158518079",
+  "audit": {
+    "android_apk_signature": "valid",
+    "verification_sdk_scope": "full range supported by runner",
+    "github_asset_digest": "matches",
+    "package_id_matches_source": true,
+    "version_name_matches_source": true,
+    "version_code_matches_source": true,
+    "google_play_signing_compatibility": "not checked",
+    "real_device_testing_of_this_exact_apk": "not checked",
+    "reproducible_source_build": false
+  },
+  "notes": [
+    "The source commit predates the APK release and the source pubspec version matches the audited APK version name and version code.",
+    "No cryptographic source-to-binary attestation or reproducible build was performed.",
+    "The APK is explicitly a testing release; conversion fidelity and broader real-device behavior remain under test.",
+    "Private signing material, APK/AAB binaries, and internal QA reports are not part of this source snapshot."
+  ]
+}

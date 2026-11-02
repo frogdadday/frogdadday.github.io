@@ -1,0 +1,21 @@
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+*.iml
+.idea/
+.vscode/
+android/local.properties
+android/key.properties
+*.jks
+*.keystore
+**/.DS_Store
+
+# Private credentials/certificates must not be committed.
+*.p12
+*.pfx
+*.pem

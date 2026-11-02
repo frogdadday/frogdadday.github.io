@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--
+      Release builds are deliberately offline. These removal markers keep a
+      future transitive dependency from silently granting network access.
+      Media playback remains local-file-only.
+    -->
+    <uses-permission
+        android:name="android.permission.INTERNET"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE"
+        tools:node="remove" />
+</manifest>

@@ -1,0 +1,54 @@
+name: Flutter checks and debug APK
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: frog-file-viewer-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      # Hosted runners include multi-GB toolchains this Android job never uses.
+      # Free space before Flutter / NDK setup so native plugin builds do not
+      # fail while stripping debug symbols.
+      - name: Free disk space for Android build
+        run: |
+          df -h .
+          sudo rm -rf /usr/share/dotnet /usr/local/share/powershell /opt/hostedtoolcache/CodeQL
+          df -h .
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Resolve packages
+        run: flutter pub get
+      - name: Generate exact tie-dye Converter launcher icons
+        run: dart run tool/generate_tie_dye_icons.dart
+      - name: Analyze
+        run: flutter analyze
+      - name: Unit and widget tests
+        run: flutter test
+      - name: Build Android debug APK
+        run: flutter build apk --debug
+      - name: Upload tie-dye launcher preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: frog-file-viewer-tie-dye-icon-512
+          path: assets/branding/generated/tiedye_launcher_512.png
+          if-no-files-found: error
+          retention-days: 7
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: frog-file-viewer-debug-apk
+          path: build/app/outputs/flutter-apk/app-debug.apk
+          if-no-files-found: error
+          retention-days: 7
