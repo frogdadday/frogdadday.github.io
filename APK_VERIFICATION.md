@@ -18,6 +18,10 @@ Results appear as a downloadable workflow artifact named `frogdadday-public-apk-
 
 Compare the recorded signer fingerprints to the *trusted* certificate for the corresponding app. Keep the signed APKs available for independent installation testing. Do not publish unreviewed packages just because a workflow is green.
 
+## Cosmic Converter TSP edition source snapshot
+
+The inspectable TSP ed. source snapshot for Cosmic Converter 1.0.6+9 is published at `source/cosmic-converter/tsp-ed-1.0.6-build-9/`. Its Android package ID, version name, and version code agree with the audited public APK. The source snapshot records the source commit and the APK SHA-256 and signer-certificate fingerprint. This is a useful version-and-identity relationship, not a reproducible-build attestation: the current process does not prove byte-for-byte that the APK was built from that exact source commit. Google Play App Signing compatibility is also not checked by this workflow.
+
 The website also exposes the SHA-256 **file** digest from the current GitHub API when provided. That checksum can help visitors compare their download against GitHub's reported bytes; it is **not an Android signing certificate**.
 
 When a release is removed or GitHub's release API is unavailable, the site does not advertise a static/stale download link.
