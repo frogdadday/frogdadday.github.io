@@ -1,0 +1,3 @@
+<resources>
+    <string name="cache_cleaner_accessibility_description">Only while you start a selected cache-cleaning run, Frog Cleaner reads the Android Settings screen to find and press Clear cache for the apps you chose. It never presses Clear storage or Clear data.</string>
+</resources>

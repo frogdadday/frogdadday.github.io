@@ -1,0 +1,35 @@
+{
+  "app": "Frog Cleaner",
+  "edition": "TSP ed.",
+  "version_name": "1.0.2",
+  "android_version_code": 4,
+  "pubspec_version": "1.0.2+4",
+  "package_id": "com.frogdadday.frog_cleaner",
+  "source_repository": "frogdadday/frog-cleaner",
+  "source_commit": "abd623a880acb750d4a1bee2f067d8985f7b4a13",
+  "source_snapshot": "https://github.com/frogdadday/frogdadday.github.io/tree/main/source/frog-cleaner/tsp-ed-1.0.2-build-4/",
+  "apk_release_tag": "frog-cleaner-v1.0.2",
+  "apk_filename": "Frog-Cleaner-v1.0.2.apk",
+  "apk_url": "https://github.com/frogdadday/frogdadday.github.io/releases/download/frog-cleaner-v1.0.2/Frog-Cleaner-v1.0.2.apk",
+  "apk_bytes": 51527698,
+  "apk_sha256": "7262c8801a2e85564ec7ec742d17dab3d90044aa576c500542e429890f1dd764",
+  "signer_certificate_sha256": "bcc04bc2e3db292321aa8a19fa495279c5341ef4e802c67cb0b79d3e5b96fa3e",
+  "audit_workflow": "https://github.com/frogdadday/frogdadday.github.io/actions/runs/40536073046",
+  "audit": {
+    "apk_signature_valid": true,
+    "github_asset_digest_matches": true,
+    "package_id_matches": true,
+    "version_name_matches": true,
+    "version_code_matches": true,
+    "google_play_signing_compatibility_checked": false,
+    "real_device_testing_checked": false,
+    "reproducible_source_build_proven": false
+  },
+  "source_binary_correspondence": "The source project's package ID, version name, and Android version code match the audited APK. The source commit is the latest development commit recorded for this snapshot. No reproducible-build attestation proves that the exact APK was built from this exact source commit.",
+  "permission_notes": [
+    "Production main manifest has no INTERNET permission.",
+    "Debug and profile manifests include INTERNET for Flutter development tooling.",
+    "Production main manifest declares MANAGE_EXTERNAL_STORAGE for optional full-device shared-storage analysis.",
+    "Production main manifest declares an optional Accessibility service for user-started cache-only automation."
+  ]
+}
