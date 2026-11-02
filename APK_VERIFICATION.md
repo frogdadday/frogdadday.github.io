@@ -1,6 +1,6 @@
 # Published APK verification
 
-The website lists nine public Android APKs. Being published through GitHub Releases **does not by itself mean an app's signing key, source integrity, security or update behavior has been independently verified**.
+The website publishes Android APKs through GitHub Releases. Being published through GitHub Releases **does not by itself mean an app's signing key, source integrity, security or update behavior has been independently verified**.
 
 ## Actual binary audit
 
