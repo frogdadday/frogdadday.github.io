@@ -53,3 +53,6 @@ The shared `apps/apk-downloads.js` checks up to 100 **current** public GitHub Re
 - **Permanent keys and Play updates:** keep a secure inventory of each app's Android package ID, certificate SHA-256 fingerprint, Play App Signing relationship, version code, human release test status, and release file SHA-256. Those cannot be inferred merely from GitHub release metadata.
 - **No signed-APK claim from the website:** a GitHub Release is not an independent Android signature audit. Run release checks on the exact public APK and document any incompatibility.
 - **Optimized artwork:** WebP derivatives only affect website transfer size, not APK signing or launcher resources. Original image assets remain intact.
+
+
+- **Frog Secure PW Keeper** has a public TSP-edition source snapshot at `source/frog-secure-pw-keeper/tsp-ed-0.1.1-build-2/` for version 0.1.1+2. It includes the Java app, cryptography, Android Keystore storage, backup exclusions, clipboard handling, tests, security design, and owner-maintained OWASP checklist. The production manifest requests zero permissions. The source version and application ID match the audited APK; no reproducible-build attestation or independent security certification is claimed.

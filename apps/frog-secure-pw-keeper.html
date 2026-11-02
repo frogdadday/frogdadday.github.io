@@ -80,7 +80,19 @@
 <li>Review system warnings; proceed only when you trust the source. Turn off the extra installation permission afterward.</li>
 </ol><p>Website APKs do not receive Google Play automatic updates. Updating an installed app requires a compatible Android package and signing certificate.</p>
 <p>This page checks whether a public APK exists; it does not independently verify the file's safety or signing certificate.</p></div></section><div class="trust-box"><h2>Important security note</h2><p>There is no recovery service and the master password is not stored. Security documentation is developer-maintained; no independent third-party audit is claimed. <a href="../security/frog-secure-pw-keeper.html">Read the plain-language security design and threat model</a> Losing the master password means losing access to the vault. Check the section above for current APK availability.</p></div>
-      <section class="privacy-policy-panel" id="privacy-policy" aria-label="Frog Secure PW Keeper privacy policy">
+      <section class="privacy-policy-panel" id="source-code" aria-label="Frog Secure PW Keeper public source inspection">
+<h2>Inspect the source</h2>
+<h3>Source Code Notice — Inspection &amp; Transparency</h3>
+<p>This source is published publicly so anyone can inspect, review, and audit how the vault works. You should not have to take my word for it. You can look.</p>
+<p><strong>Privacy &amp; transparency:</strong> Review the production manifest, cryptography, Android Keystore integration, local storage, backup exclusions, clipboard handling, session lifecycle, password generator, and tests. The production manifest requests zero permissions, including no Internet permission. There are no runtime library dependencies, network services, analytics, ads, or cloud sync.</p>
+<p><strong>Copyright &amp; usage rights:</strong> All rights reserved. Public access does not grant permission to commercially exploit, rebrand, redistribute, or publish compiled versions. The accompanying license permits inspection, audit, private non-commercial study, and limited GitHub-native review forks only.</p>
+<p>The purpose of publication is transparency and independent inspection—not transfer of ownership or permission to reuse the work.</p>
+<p><strong>Source identity:</strong> v0.1.1+2 · application ID <code>app.grounded.password</code></p>
+<p><a href="https://github.com/frogdadday/frogdadday.github.io/tree/main/source/frog-secure-pw-keeper/tsp-ed-0.1.1-build-2/">Browse the TSP edition source snapshot</a></p>
+<p><a href="https://github.com/frogdadday/frogdadday.github.io/blob/main/source/frog-secure-pw-keeper/tsp-ed-0.1.1-build-2/LICENSE.md">Read the source-available license</a> · <a href="https://github.com/frogdadday/frogdadday.github.io/blob/main/source/frog-secure-pw-keeper/tsp-ed-0.1.1-build-2/SECURITY.md">Read the security design</a></p>
+<p><strong>Important:</strong> This is an owner-maintained security project, not an independent third-party audit or certification. The source's version and application identity match the published APK; no reproducible-build attestation proves that exact APK was built from this exact source commit.</p>
+</section>
+<section class="privacy-policy-panel" id="privacy-policy" aria-label="Frog Secure PW Keeper privacy policy">
         <h2>Privacy &amp; permissions</h2>
         <p>The app has no internet permission, Autofill service, or accessibility service. Your encrypted vault stays on your device unless you manually export an encrypted backup. A manual backup is the only supported way to move the vault to another phone; the policy explains restoration and deletion.</p>
         <a class="privacy-policy-link" href="https://frogdadday.com/frog-secure-pw-keeper-privacy/" target="_blank" rel="noopener noreferrer">Read the full privacy policy</a>

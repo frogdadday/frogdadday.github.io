@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!-- Test-only document provider. Never included in the application APK. -->
+        <provider android:name="app.grounded.password.TestDocuments" android:authorities="app.grounded.password.test.documents" android:exported="true" />
+    </application>
+</manifest>

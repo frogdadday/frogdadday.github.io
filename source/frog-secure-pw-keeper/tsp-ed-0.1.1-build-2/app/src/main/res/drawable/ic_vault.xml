@@ -1,0 +1,45 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path android:fillColor="#123D31" android:pathData="M0,0h48v48h-48z" />
+
+    <!-- A bold white frog: designed to stay recognizable at launcher-icon size. -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#000000"
+        android:strokeWidth="3.2"
+        android:strokeLineJoin="round"
+        android:pathData="M9,33C8,24 10,16 16,14C17,8 22,6 24,10C26,6 31,8 32,14C38,16 40,24 39,33C37,39 31,42 24,42C17,42 11,39 9,33Z" />
+
+    <!-- Eye whites carry the same heavy outline as the body. -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#000000"
+        android:strokeWidth="2.6"
+        android:pathData="M11,18C11,12 15,9 19,11C22,13 21,19 18,21C14,22 11,21 11,18Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#000000"
+        android:strokeWidth="2.6"
+        android:pathData="M29,11C33,9 37,12 37,18C37,21 34,22 30,21C27,19 26,13 29,11Z" />
+
+    <!-- Bright green eyes with black pupils and a small white catchlight. -->
+    <path android:fillColor="#74FF00" android:strokeColor="#000000" android:strokeWidth="1.4"
+        android:pathData="M13.5,17C13.5,14.2 15.3,12.7 17.4,13.5C19.6,14.4 19.5,18.1 17.5,19.2C15.4,20.1 13.5,19.2 13.5,17Z" />
+    <path android:fillColor="#74FF00" android:strokeColor="#000000" android:strokeWidth="1.4"
+        android:pathData="M30.6,13.5C32.7,12.7 34.5,14.2 34.5,17C34.5,19.2 32.6,20.1 30.5,19.2C28.5,18.1 28.4,14.4 30.6,13.5Z" />
+    <path android:fillColor="#000000" android:pathData="M15.7,15.3C17.6,14.8 18.5,16.1 17.9,18.1C16.1,18.7 15.1,17.4 15.7,15.3Z" />
+    <path android:fillColor="#000000" android:pathData="M30.1,18.1C29.5,16.1 30.4,14.8 32.3,15.3C32.9,17.4 31.9,18.7 30.1,18.1Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M16,15.7h1.1v1.1h-1.1zM30.9,15.7h1.1v1.1h-1.1z" />
+
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#000000"
+        android:strokeWidth="2.4"
+        android:strokeLineCap="round"
+        android:pathData="M16,29C18,32 21,33.5 24,33.5C27,33.5 30,32 32,29" />
+    <path android:fillColor="#FFFFFF" android:strokeColor="#000000" android:strokeWidth="1.4"
+        android:pathData="M20.8,25.3C21.7,24.6 22.7,24.6 23.3,25.5C22.7,26.6 21.7,26.6 20.8,25.3ZM24.7,25.5C25.3,24.6 26.3,24.6 27.2,25.3C26.3,26.6 25.3,26.6 24.7,25.5Z" />
+</vector>

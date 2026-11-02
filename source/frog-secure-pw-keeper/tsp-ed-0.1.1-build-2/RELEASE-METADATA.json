@@ -1,0 +1,35 @@
+{
+  "app": "Frog Secure PW Keeper",
+  "edition": "TSP ed.",
+  "version_name": "0.1.1",
+  "android_version_code": 2,
+  "package_id": "app.grounded.password",
+  "source_repository": "frogdadday/frog-secure-pw-keeper",
+  "source_commit": "562225fdfa8ad004dc69a86840e274b4d8f720e6",
+  "source_snapshot": "https://github.com/frogdadday/frogdadday.github.io/tree/main/source/frog-secure-pw-keeper/tsp-ed-0.1.1-build-2/",
+  "apk_release_tag": "frog-secure-pw-keeper-v0.1.1",
+  "apk_filename": "Frog-Secure-PW-Keeper-v0.1.1.apk",
+  "apk_url": "https://github.com/frogdadday/frogdadday.github.io/releases/download/frog-secure-pw-keeper-v0.1.1/Frog-Secure-PW-Keeper-v0.1.1.apk",
+  "apk_bytes": 1436094,
+  "apk_sha256": "36effae4b256a6ae712627b1f66e9131bc21d02386f5f6ea31dbd11306a21c1d",
+  "signer_certificate_sha256": "2eebae504d8d6ba2cf22a751eb6309389ebc3936e37e1a0a324e5fb3c6edc2e5",
+  "audit_workflow": "https://github.com/frogdadday/frogdadday.github.io/actions/runs/39824425941",
+  "audit": {
+    "apk_signature_valid": true,
+    "github_asset_digest_matches": true,
+    "package_id_matches": true,
+    "version_name_matches": true,
+    "version_code_matches": true,
+    "google_play_signing_compatibility_checked": false,
+    "reproducible_source_build_proven": false,
+    "independent_security_review": false
+  },
+  "source_binary_correspondence": "The current source project's application ID, version name, and version code match the audited APK. The snapshot commit is later than the APK release and includes a developer-contact update. No reproducible-build attestation proves that the exact APK was built from this exact source commit.",
+  "privacy_notes": [
+    "The production manifest requests zero permissions, including no INTERNET permission.",
+    "There are no runtime library dependencies, analytics SDKs, ads, accounts, WebViews, network services, or cloud sync.",
+    "Vault data is stored in Android no-backup private storage with additional Android Keystore encryption.",
+    "Manual encrypted export is user-initiated; an external document provider may upload the encrypted backup if the user selects a cloud destination.",
+    "Clipboard expiry is best effort and cannot control keyboards or other apps."
+  ]
+}
