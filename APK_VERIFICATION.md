@@ -30,3 +30,10 @@ When a release is removed or GitHub's release API is unavailable, the site does 
 ## Frog File Viewer TSP edition source snapshot
 
 The inspectable Frog File Viewer source snapshot for version 0.2.1+3 is published at `source/frog-file-viewer/tsp-ed-0.2.1-build-3/`. Its package ID, version name, and Android version code match the audited public testing APK. The snapshot records the source commit, APK SHA-256, and signer-certificate fingerprint. This is a version-and-identity match, not a reproducible-build attestation. The APK audit does not establish Google Play App Signing compatibility or real-device testing of that exact artifact. The app remains explicitly labeled a testing release; document conversion fidelity and broader device validation are still ongoing.
+
+
+## Frog Cleaner TSP edition source snapshot
+
+The inspectable Frog Cleaner source snapshot for version 1.0.2+4 is published at `source/frog-cleaner/tsp-ed-1.0.2-build-4/`. Its package ID, version name, and Android version code match the audited public APK. The snapshot records the source commit, APK SHA-256, and signer-certificate fingerprint. This is a version-and-identity match, not a reproducible-build attestation. The APK audit does not establish Google Play App Signing compatibility or real-device testing of that exact artifact.
+
+The production manifest has no Internet permission, but it does declare optional `MANAGE_EXTERNAL_STORAGE` and an Accessibility service for user-started cache-only automation. Those permissions and behaviors require independent review and applicable Google Play policy approval; this source publication is not evidence of such approval.
