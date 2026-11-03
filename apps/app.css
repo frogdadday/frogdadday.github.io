@@ -57,6 +57,7 @@
 
 /* Cosmic Converter screenshots: a lightweight, swipeable image strip. */
 .converter-gallery { margin: -1.25rem 0 2.7rem; }
+.file-viewer-gallery { margin-top: 2.7rem; }
 .converter-gallery h2 { margin-bottom: .4rem; font-size: clamp(1.65rem, 3vw, 2.25rem); }
 .converter-gallery-intro { margin: 0 0 1.3rem; color: var(--muted); }
 .converter-gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 1rem; }
