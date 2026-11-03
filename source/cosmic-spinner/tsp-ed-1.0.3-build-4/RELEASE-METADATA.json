@@ -1,0 +1,40 @@
+{
+  "app": "Cosmic Spinner",
+  "source_snapshot_path": "source/cosmic-spinner/tsp-ed-1.0.3-build-4/",
+  "source_repository": "frogdadday/Cosmic-Spinner",
+  "source_repository_visibility": "private",
+  "source_branch": "main",
+  "source_commit": "a40aba27a1c9192e40eff2599731162560335ff7",
+  "source_commit_date_utc": "2026-10-28T09:29:02Z",
+  "pubspec_version": "1.0.3+4",
+  "version_name": "1.0.3",
+  "android_version_code": 4,
+  "package_id": "com.frogdadday.cosmicspinner",
+  "matching_apk_published": false,
+  "existing_public_apk": {
+    "version_name": "1.0.2",
+    "release_date": "2026-10-22",
+    "sha256": "233fca614355d3aa5e1f57daf828459ec68ae344c058dc193017337f4e038dec",
+    "signer_certificate_sha256": "53:DD:1C:E7:E8:24:70:A3:56:B6:CC:2F:A5:9D:9E:08:C6:6E:65:A2:36:29:62:CF:CD:A3:C0:2C:77:5F:EB:64",
+    "source_correspondence": "not claimed; older APK is not represented as built from this source snapshot"
+  },
+  "audit": {
+    "production_manifest_runtime_permissions": [],
+    "internet_permission": false,
+    "analytics_or_advertising_sdk_in_direct_dependencies": false,
+    "local_storage": true,
+    "matching_apk_signature_audit": "not performed for v1.0.3 because no matching APK is published",
+    "reproducible_source_build": false,
+    "automated_tests": "upstream project status records 35 passing tests at prior milestones; current CI workflow runs tests but no new test run was performed for this snapshot",
+    "full_third_party_license_inventory": "not generated; run flutter pub licenses",
+    "android_gradle_wrapper": "not tracked in source commit"
+  },
+  "excluded": [
+    "APK/AAB binaries",
+    "signing keys and credentials",
+    "private SDK/toolchain cache",
+    "local IDE settings",
+    "internal project notes/status documents",
+    "large original assets/icon.png master artwork"
+  ]
+}
