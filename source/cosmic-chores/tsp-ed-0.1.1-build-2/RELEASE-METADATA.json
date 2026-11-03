@@ -1,0 +1,14 @@
+{
+  "app": "Cosmic Chores",
+  "source_version": "0.1.1",
+  "android_version_code": 2,
+  "application_id": "com.frogdadday.cosmicchores",
+  "source_repository": "frogdadday/Cosmic-Chores",
+  "source_commit": "c93bd7b6b8394457fff9a73b8caf930524f1e3e2",
+  "source_commit_date": "2026-10-28T21:08:58Z",
+  "published_apk_version": "0.1.0",
+  "published_apk_release_date": "2026-10-22",
+  "published_apk_sha256": "264a23b76e2f0b0c2a7d2fbbd8b9c5c6abc5c525358f527d97e78d79f7d829ef",
+  "published_apk_signer_sha256": "1F:F3:4F:7C:F1:68:B2:D5:6F:E3:05:9C:5A:8F:B8:FF:01:3D:38:D3:A1:03:E8:B3:C6:80:F3:6E:E2:DA:85:D1",
+  "notes": "APK record copied from existing public website page; not a match to this newer source snapshot. No build/test rerun or reproducible-build claim."
+}

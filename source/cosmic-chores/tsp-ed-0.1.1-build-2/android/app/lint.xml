@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <!-- The adaptive foreground intentionally reuses the established launcher art. -->
+    <issue id="IconDuplicates">
+        <ignore path="src/main/res/mipmap-mdpi/ic_launcher_foreground.png" />
+        <ignore path="src/main/res/mipmap-hdpi/ic_launcher_foreground.png" />
+        <ignore path="src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" />
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" />
+        <ignore path="src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" />
+    </issue>
+</lint>
