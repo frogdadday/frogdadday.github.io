@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <!-- Flutter regenerates this Windows-only, gitignored file on every build. -->
+    <issue id="PropertyEscape">
+        <ignore regexp=".*local\.properties" />
+    </issue>
+</lint>

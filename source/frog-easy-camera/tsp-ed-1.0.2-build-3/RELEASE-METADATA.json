@@ -1,0 +1,38 @@
+{
+  "app": "Frog Easy Camera",
+  "source_snapshot_path": "source/frog-easy-camera/tsp-ed-1.0.2-build-3/",
+  "source_repository": "frogdadday/Frog-Easy-Camera",
+  "source_repository_visibility": "private",
+  "source_branch": "main",
+  "source_commit": "e3a36551bad8c6c1379e68fe9eccd70913e14d27",
+  "source_commit_date_utc": "2026-10-28T21:08:39Z",
+  "pubspec_version": "1.0.2+3",
+  "version_name": "1.0.2",
+  "android_version_code": 3,
+  "package_id": "com.frogdadday.easy_camera",
+  "matching_apk_published": false,
+  "existing_public_apk": {
+    "version_name": "1.0.1",
+    "release_date": "2026-10-22",
+    "sha256": "9f00847ec1e96787a4e5db4fb31d942128d35ee11b07715b48fa6449e2415b08",
+    "signer_certificate_sha256": "25:EB:2C:3F:76:1B:95:CF:FB:D2:81:59:72:8D:75:68:30:F8:BD:18:FB:38:E1:98:CF:84:24:95:4F:D1:95:05",
+    "source_correspondence": "not claimed; older APK is not represented as built from this source snapshot"
+  },
+  "audit": {
+    "source_commit_recorded": true,
+    "pubspec_version_and_package_id_recorded": true,
+    "matching_apk_signature_audit": "not performed for v1.0.2 because no matching APK is published",
+    "reproducible_source_build": false,
+    "physical_device_testing": "not performed as part of snapshot publication",
+    "full_third_party_license_inventory": "not generated; run flutter pub licenses"
+  },
+  "excluded": [
+    "APK/AAB binaries",
+    "android/key.properties",
+    "production keystore",
+    "local SDK/IDE paths",
+    "internal planning files",
+    "private key-generation helper script",
+    "assets/icon.png (large original binary not needed by pubspec runtime asset declarations)"
+  ]
+}
