@@ -116,7 +116,9 @@
           panel.querySelector('[data-apk-version]')?.insertAdjacentElement('afterend', current);
         }
         const heroStatus = panel.closest('.detail-main')?.querySelector('.detail-copy .eyebrow');
-        if (heroStatus) heroStatus.textContent = 'Direct APK Available · Android';
+        if (heroStatus) heroStatus.textContent = panel.closest('.detail-main')?.querySelector('.play-store-panel')
+          ? 'Google Play · Direct APK Available · Android'
+          : 'Direct APK Available · Android';
       }
       let availableCount = 0;
       for (const card of cards) {
